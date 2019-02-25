@@ -1,0 +1,9 @@
+baseurl = "/"
+languageCode = "en-gb"
+title = "Alan Chatfield"
+preserveTaxonomyNames = true
+disableKinds = ["taxonomyTerm"]
+[permalinks]
+  post = "/:title/"
+[params]
+  mainSections = ["marketing", "technology","martech","opinion"]

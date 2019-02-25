@@ -1,0 +1,16 @@
+{{ if lt .Paginator.PageNumber 5 }}
+	<nav class="pagination" role="navigation">
+	{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+		{{ if .Paginator.HasPrev }}
+			<a class="newer-posts" rel="prev" href="{{.Paginator.Prev.URL}}">
+				<span aria-hidden="true">&larr;</span> Newer Posts
+			</a>
+		{{ end }}
+		{{ if .Paginator.HasNext }}
+			<a class="older-posts" href="{{.Paginator.Next.URL}}">
+				Older Posts <span aria-hidden="true">&rarr;</span>
+			</a>
+		{{ end }}
+	{{ end }}
+	</nav>
+{{ end }}

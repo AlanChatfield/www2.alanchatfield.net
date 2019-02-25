@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="blog-cover {{.Params.banner}}" style="background-image: url('{{ with .Params.image }}{{ . }}{{ end }}')">
+    <section>
+        <div class="container">
+            <h1 class="title">{{.Title}}</h1>
+            <h3>{{.Description}}</h3>	
+        </div>
+    </section>			
+</div>
+<div class="page-template">
+<article>
+    <div class="container">
+        <section>
+      {{ .Content }}
+        </section>     
+    </div>
+</article>   
+</div>    
+{{ end }}

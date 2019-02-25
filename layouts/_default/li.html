@@ -1,0 +1,10 @@
+<section class="index img">
+	<a href="{{ .Permalink }}" rel="prefetch"><img src="{{ with .Params.image }}{{ . }}{{ end }}" class="avatar {{ .Params.banner }}"></img></a>
+	<div>
+		<a href="{{ .Permalink }}" rel="prefetch">
+			<h2 class="title">{{ .Title }}</h2>
+			<p>{{ .Description }}</p>
+			<div class="meta">{{ .Date.Format "2 Jan 2006" }} |  {{ .Params.topic }}</div>
+		</a>
+	</div>
+</section>

@@ -1,0 +1,71 @@
+{{ define "main" }}
+
+{{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "bannerStyle" .Params.banner) }}
+
+	<article class="container grid long">			
+			<section class="index img">
+				<div class="container author">
+<img src="//www.gravatar.com/avatar/60fa755d6b89ee9f9d59d0f957711f40">
+					<h2>Hello,</h2>
+					<p>I am Alan Chatfield, Senior Digital Marketing Strategist at <a href="//www.crmtechnologies.com">CRMT</a>. 
+					<br><br>										
+					Welcome to my personal blog. I write about marketing technology and B2B marketing, with a primary focus on how marketers can make the most effective use of their martech stack.<br><br>
+<a href="/about/">Continue reading <span aria-hidden="true">→</span></a></p> 		
+				</div>
+			</section>
+
+			{{ range first 1 (where .Data.Pages "Type" "post") }}
+					{{ .Render "li" }}
+	</article>				
+<div class="{{.Params.topic | urlize}}">
+			{{ end }}	
+
+	<article class="container grid demand-creation">	
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>{{.Params.section1.heading}}</h2>
+		<p>{{.Params.section2.text}}</p>
+		{{ $taggedContent1 := .Site.Taxonomies.categories.marketing.Pages }}			
+		{{ range first 4 (where .Data.Pages "Params.topic" "Marketing Operations") }}
+			{{ .Render "li" }}
+		{{ end }} 
+	</article>
+	
+	<article class="container grid digital-transformation">	
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/{{.Params.section2.link}}">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>{{.Params.section2.heading}}</h2>
+		<p>{{.Params.section2.text}}</p>
+		{{ $taggedContent2 := .Site.Taxonomies.categories.technology.Pages }}		
+		{{ range first 4 (where .Data.Pages "Params.topic" "Digital Transformation") }}
+			{{ .Render "li" }}
+		{{ end }} 
+	</article>
+
+	<article class="container grid marketing-automation">	
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/{{.Params.section3.link}}">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>{{.Params.section3.heading}}</h2>
+		<p>{{.Params.section3.text}}</p>
+		{{ $taggedContent3 := .Site.Taxonomies.categories.martech.Pages }}
+		{{ range first 4 $taggedContent3 }}
+			{{ .Render "li" }}
+		{{ end }} 
+	</article>
+	
+	<article class="container grid noimg opinion">	
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/opinion">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>News & Current Affairs</h2>
+		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
+		{{ $taggedContent4 := .Site.Taxonomies.categories.opinion.Pages }}
+		{{ range first 4 (where .Data.Pages "Params.topic" "Politics") }}
+			{{ .Render "li" }}
+		{{ end }} 
+	</article>
+	</div>    
+{{end}}

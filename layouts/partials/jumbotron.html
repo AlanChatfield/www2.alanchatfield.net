@@ -1,0 +1,13 @@
+<div class="blog-cover {{.Params.banner}}" style="background-image: url('{{ with .Params.image }}{{ . }}{{ end }}')">
+    <section>
+        <div class="container">
+            <h1 class="title">{{.Title}}</h1>
+            <h3>{{.Description}}</h3>
+            <div class="social">
+                <a class="icon-tw" href='http://twitter.com/share?text={{.Title }}&url={{ .Permalink }}' target="_blank"><i class="fab fa-twitter fa-sm"></i></a>
+                <a class="icon-li" href='https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{.Title }}' target="_blank"><i class="fab fa-linkedin-in fa-sm"></i></a>			
+                <a class="icon-fb" href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" target="_blank"><i class="fab fa-facebook-f fa-sm"></i></a>				
+            </div>			
+        </div>
+    </section>			
+</div>
