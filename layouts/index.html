@@ -27,7 +27,7 @@
 		<h2>{{.Params.section1.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
 		{{ $taggedContent1 := .Site.Taxonomies.categories.marketing.Pages }}			
-		{{ range first 4 (where (or (.Data.Pages "Params.topic" "Marketing Operations") (.Data.Pages "Params.topic" "Demand Creation")) }}
+		{{ range first 4 (where (or (.Data.Pages "Params.topic" "Marketing Operations") (.Data.Pages "Params.topic" "Demand Creation"))) }}
 			{{ .Render "li" }}
 		{{ end }} 
 	</article>
