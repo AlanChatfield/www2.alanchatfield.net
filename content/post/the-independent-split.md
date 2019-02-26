@@ -7,7 +7,7 @@ image = "/img/photo-1470608756445-2c9906b0680f.jpg"
 tags = ["Politics"]
 title = "Breaking Away: The Independent Group"
 topic = "Politics"
-
+url = "/the-independent-split/"
 +++
 It finally happened. After years of rumours and non-denials, the UK Labour Party has finally split. On Monday morning, seven MPs resigned from the Labour Party to sit in Parliament as The Independent Group. They are not as yet a new political party. That decision has been kicked into the future once the current Brexit crisis gripping Westminster has been resolved. Chuka Umunna and Chris Leslie - the two best known figures in the breakaway are leading lights of the People's Vote campaign for a second referendum, and for now that campaign takes priority.
 
