@@ -14,7 +14,7 @@
 				</div>
 			</section>
 
-			{{ range first 1 (where .Data.Pages "Type" "post") }}
+			{{ range first 1 (or .Site.Taxonomies.categories.marketing.Pages .Site.Taxonomies.categories.technology.Pages .Site.Taxonomies.categories.martech.Pages) }}
 					{{ .Render "li" }}
 	</article>				
 <div class="{{.Params.topic | urlize}}">
