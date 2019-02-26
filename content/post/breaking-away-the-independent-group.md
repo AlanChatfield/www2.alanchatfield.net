@@ -3,7 +3,6 @@ banner = "top-align"
 categories = ["opinion"]
 date = "2019-02-19T22:00:00+00:00"
 description = "Amidst accusations of antisemitism, the long-awaited Labour Party split has finally happened. It will be years before its true impact becomes clear."
-draft = true
 image = "/img/photo-1470608756445-2c9906b0680f.jpg"
 tags = ["Politics"]
 title = "Breaking Away: The Independent Group"
