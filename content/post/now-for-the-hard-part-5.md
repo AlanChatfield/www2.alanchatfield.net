@@ -9,7 +9,7 @@ topic: Politics
 date: 2019-01-20 08:30:00 +0000
 description: The UK Parliament finally rejected the Brexit Withdrawal Agreement. The
   consequences have been relatively minor so far, but expect that to change next week.
-image: https://source.unsplash.com/geNNFqfvw48/1920x1080
+image: "/img/brexit-referendum-uk-1468255044bix.jpg"
 
 ---
 It finally happened, if a little later than expected. Theresa May's Brexit deal was voted down on Tuesday by a record margin, marking the latest in a series of defeats on the biggest issue of the day. The 230 vote defeat in the meaningful vote caught everyone by surprise but was actually only a few votes bigger than forecast. The government were hoping that many opponents of the deal would abstain, but few did leading to a crushing humiliation for the Prime Minister that had surprisingly tame consequences.
