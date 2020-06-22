@@ -1,0 +1,37 @@
+[context.production.environment]
+HUGO_VERSION = "0.71.1"
+HUGO_ENV = "production"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.71.1"
+
+[[plugins]]
+package = "netlify-plugin-ghost-markdown"
+
+  [plugins.inputs]
+  # Required: Your Ghost domain, must not end in a trailing slash
+  ghostURL = "https://alanchatfield.net"
+
+  # Required: Content API key from the Integrations screen in Ghost Admin
+  ghostKey = "0789c1f3367a529c597084cc4d"
+
+  # Optional: Directory containing image assets (assets/images by default)
+  assetsDir = "./static/img/"
+
+  # Optional: Directory containing pages (site root by default)
+  pagesDir = "./"
+
+  # Optional: Directory containing posts (_posts/ directory by default)
+  postsDir = "./_post/"
+
+  # Optional: Layout value for pages (page by default)
+  pageLayout = "page"
+
+  # Optional: Layout value for posts (post by default)
+  postsLayout = "post"
+
+  # Optional: Date prefix on post file names (true by default)
+  postDatePrefix = false
+
+  # Optional: File path and name for a timestamp caching file (_data/ghostMarkdownCache.json by default)
+  cacheFile = "./_data/ghostMarkdownCache.json"
