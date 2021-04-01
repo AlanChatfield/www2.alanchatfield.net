@@ -1,8 +1,8 @@
-<div class="blog-cover index-cover {{.bannerStyle}}" style="background-image: url('{{.imageUrl}}')">
+<div class="blog-cover index-cover {{.bannerStyle}}" style="background-image: url('{{ replace .Params.image "/static" "" }}')">
     <section>
         <div class="container">
             <h1 class="title">{{.title}}</h1>
-            <h3>{{.subtitle}}</h3>		
+            <h3>{{.Params.excerpt}}</h3>		
         </div>
     </section>			
 </div>
