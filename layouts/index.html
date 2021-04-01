@@ -2,6 +2,11 @@
 
 {{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "bannerStyle" .Params.banner) }}
 
+{{ range first 1 (or (index .Site.Taxonomies.tags "digital-transformation") (index .Site.Taxonomies.tags "demand-creation") (index .Site.Taxonomies.tags "marketing-operations") (index .Site.Taxonomies.tags "marketing-technology")) }}
+    {{ range (.GetTerms "tags") }}
+        <main class="{{ .LinkTitle | urlize }}">
+    {{ end }}
+{{ end }}		
 	<article class="container grid long">			
 			<section class="index img">
 				<div class="container author">
@@ -15,12 +20,8 @@
 			</section>
 		{{ range first 1 (or (index .Site.Taxonomies.tags "digital-transformation") (index .Site.Taxonomies.tags "demand-creation") (index .Site.Taxonomies.tags "marketing-operations") (index .Site.Taxonomies.tags "marketing-technology")) }}
 			{{ .Render "li" }}
-
-    {{ range (.GetTerms "tags") }}
-        <div class="{{ .LinkTitle | urlize }}">
-    {{ end }}	
 		{{ end }}		
-</article>	
+	</article>
 
 	<article class="container grid marketing-operations">	
 		<nav class="pagination" role="navigation">	
@@ -66,4 +67,5 @@
 		{{ end }}
 	</article>
 	</div>    
+</main>
 {{end}}
