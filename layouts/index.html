@@ -13,6 +13,11 @@
 <a href="/about/">Continue reading <span aria-hidden="true">→</span></a></p> 		
 				</div>
 			</section>
+		{{ with (or .Site.Taxonomies.categories.marketing.Pages .Site.Taxonomies.categories.technology.Pages .Site.Taxonomies.categories.martech.Pages) }}
+		    {{ range first 1 . }}
+			{{ .Render "li" }}
+		    {{ end }}
+		{{ end }}
 	</article>				
 <div class="{{.Params.topic | urlize}}">
 	
@@ -22,10 +27,11 @@
 		</nav>		
 		<h2>{{.Params.section1.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
-		{{ $taggedContent1 := .Site.Taxonomies.categories.marketing.Pages }}			
-		{{ range first 4 $taggedContent1 }}
+		{{ with .Site.Taxonomies.categories.marketing.Pages }}
+		    {{ range first 4 . }}
 			{{ .Render "li" }}
-		{{ end }} 
+		    {{ end }}
+		{{ end }}
 	</article>
 	
 	<article class="container grid digital-transformation">	
