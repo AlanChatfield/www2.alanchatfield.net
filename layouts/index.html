@@ -56,10 +56,10 @@
 	
 	<article class="container grid noimg opinion">	
 		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="/opinion">See more <span aria-hidden="true">→</span></a>
+			<a class="older-posts" href="/{{.Params.section4.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
-		<h2>News & Current Affairs</h2>
-		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
+		<h2>{{.Params.section4.heading}}</h2>
+		<p>{{.Params.section4.text}}</p>
 		{{ range first 4 (index .Site.Taxonomies.tags "digital-transformation") }}
 			{{ .Render "li" }}
 		{{ end }}
