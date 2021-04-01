@@ -15,10 +15,11 @@
 			</section>
 		{{ range first 1 (or (index .Site.Taxonomies.tags "digital-transformation") (index .Site.Taxonomies.tags "demand-creation") (index .Site.Taxonomies.tags "marketing-operations") (index .Site.Taxonomies.tags "marketing-technology")) }}
 			{{ .Render "li" }}
-		{{ end }}
+
     {{ range (.GetTerms "tags") }}
         <div class="{{ .LinkTitle }}">
-    {{ end }}			
+    {{ end }}	
+		{{ end }}		
 </article>	
 	<article class="container grid demand-creation">	
 		<nav class="pagination" role="navigation">	
