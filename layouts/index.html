@@ -16,9 +16,10 @@
 		{{ range first 1 (or (index .Site.Taxonomies.tags "digital-transformation") (index .Site.Taxonomies.tags "demand-creation") (index .Site.Taxonomies.tags "marketing-operations") (index .Site.Taxonomies.tags "marketing-technology")) }}
 			{{ .Render "li" }}
 		{{ end }}
-	</article>				
-<div class="{{.Params.topic | urlize}}">
-	
+    {{ range (.GetTerms "tags") }}
+        <div class="{{ .LinkTitle }}">
+    {{ end }}			
+</article>	
 	<article class="container grid demand-creation">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
