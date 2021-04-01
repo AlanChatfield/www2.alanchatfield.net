@@ -6,7 +6,7 @@
     <div class="container">
         <header>
             <h2 class="title xs-show">{{.Title}}</h2>		
-            <div class="meta">{{ .Date.Format "2 January 2006" }} | {{.Params.tags}}</div>			
+            <div class="meta">{{ .Date.Format "2 January 2006" }} | {{ partial "tags" . }}</div>			
         </header>
 
         <section>
