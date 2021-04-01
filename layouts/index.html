@@ -13,7 +13,7 @@
 <a href="/about/">Continue reading <span aria-hidden="true">→</span></a></p> 		
 				</div>
 			</section>
-		{{ with (or .Site.Taxonomies.categories.marketing.Pages .Site.Taxonomies.categories.technology.Pages .Site.Taxonomies.categories.martech.Pages) }}
+		{{ with (or .Site.Taxonomies.tags.demand-creation.Pages .Site.Taxonomies.tags.marketing-operations.Pages .Site.Taxonomies.tags.marketing-technology.Pages .Site.Taxonomies.tags.digital-transformation.Pages) }}
 		    {{ range first 1 . }}
 			{{ .Render "li" }}
 		    {{ end }}
@@ -27,7 +27,7 @@
 		</nav>		
 		<h2>{{.Params.section1.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
-		{{ with .Site.Taxonomies.categories.marketing.Pages }}
+		{{ with .Site.Taxonomies.tags.demand-creation.Pages }}
 		    {{ range first 4 . }}
 			{{ .Render "li" }}
 		    {{ end }}
@@ -40,7 +40,7 @@
 		</nav>		
 		<h2>{{.Params.section2.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
-		{{ with .Site.Taxonomies.categories.marketing.Pages }}
+		{{ with .Site.Taxonomies.tags.marketing-operations.Pages }}
 		    {{ range first 4 . }}
 			{{ .Render "li" }}
 		    {{ end }}
@@ -53,7 +53,7 @@
 		</nav>		
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
-		{{ with .Site.Taxonomies.categories.martech.Pages }}
+		{{ with .Site.Taxonomies.tags.marketing-technology.Pages }}
 		    {{ range first 4 . }}
 			{{ .Render "li" }}
 		    {{ end }}
@@ -66,7 +66,7 @@
 		</nav>		
 		<h2>News & Current Affairs</h2>
 		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
-		{{ with .Site.Taxonomies.categories.opinion.Pages }}
+		{{ with .Site.Taxonomies.tags.digital-transformation.Pages }}
 		    {{ range first 4 . }}
 			{{ .Render "li" }}
 		    {{ end }}
