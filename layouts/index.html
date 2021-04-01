@@ -21,18 +21,8 @@
     {{ end }}	
 		{{ end }}		
 </article>	
-	<article class="container grid demand-creation">	
-		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
-		</nav>		
-		<h2>{{.Params.section1.heading}}</h2>
-		<p>{{.Params.section2.text}}</p>
-		    {{ range first 4 (index .Site.Taxonomies.tags "demand-creation") }}
-			{{ .Render "li" }}
-		    {{ end }}
-	</article>
-	
-	<article class="container grid digital-transformation">	
+
+	<article class="container grid marketing-operations">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section2.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
@@ -42,6 +32,17 @@
 			{{ .Render "li" }}
 		    {{ end }}
 	</article>
+		
+	<article class="container grid demand-creation">	
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>{{.Params.section1.heading}}</h2>
+		<p>{{.Params.section2.text}}</p>
+		    {{ range first 4 (index .Site.Taxonomies.tags "demand-creation") }}
+			{{ .Render "li" }}
+		    {{ end }}
+	</article>		
 
 	<article class="container grid marketing-automation">	
 		<nav class="pagination" role="navigation">	
@@ -54,7 +55,7 @@
 		{{ end }}
 	</article>
 	
-	<article class="container grid noimg opinion">	
+	<article class="container grid noimg digital-transformation">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section4.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
