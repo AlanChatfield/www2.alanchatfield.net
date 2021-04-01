@@ -13,7 +13,9 @@
 <a href="/about/">Continue reading <span aria-hidden="true">→</span></a></p> 		
 				</div>
 			</section>
-
+	</article>				
+<div class="{{.Params.topic | urlize}}">
+	
 	<article class="container grid demand-creation">	
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
@@ -32,9 +34,10 @@
 		</nav>		
 		<h2>{{.Params.section2.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
-		{{ $taggedContent2 := .Site.Taxonomies.categories.technology.Pages }}		
-		{{ range first 4 $taggedContent2 }}
+		{{ with .Site.Taxonomies.categories.marketing.Pages }}
+		    {{ range first 4 . }}
 			{{ .Render "li" }}
+		    {{ end }}
 		{{ end }}
 	</article>
 
@@ -44,10 +47,11 @@
 		</nav>		
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
-		{{ $taggedContent3 := .Site.Taxonomies.categories.martech.Pages }}
-		{{ range first 4 $taggedContent3 }}
+		{{ with .Site.Taxonomies.categories.martech.Pages }}
+		    {{ range first 4 . }}
 			{{ .Render "li" }}
-		{{ end }} 
+		    {{ end }}
+		{{ end }}
 	</article>
 	
 	<article class="container grid noimg opinion">	
@@ -56,9 +60,10 @@
 		</nav>		
 		<h2>News & Current Affairs</h2>
 		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
-		{{ $taggedContent4 := .Site.Taxonomies.categories.opinion.Pages }}
-		{{ range first 4 $taggedContent4 }}
+		{{ with .Site.Taxonomies.categories.opinion.Pages }}
+		    {{ range first 4 . }}
 			{{ .Render "li" }}
+		    {{ end }}
 		{{ end }}
 	</article>
 	</div>    
