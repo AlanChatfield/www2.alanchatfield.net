@@ -13,10 +13,8 @@
 <a href="/about/">Continue reading <span aria-hidden="true">→</span></a></p> 		
 				</div>
 			</section>
-		{{ with (or .Site.Taxonomies.tags.demand-creation.Pages .Site.Taxonomies.tags.marketing-operations.Pages .Site.Taxonomies.tags.marketing-technology.Pages .Site.Taxonomies.tags.digital-transformation.Pages) }}
-		    {{ range first 1 . }}
+		{{ range first 1 (where .Data.Pages "Type" "post") }}
 			{{ .Render "li" }}
-		    {{ end }}
 		{{ end }}
 	</article>				
 <div class="{{.Params.topic | urlize}}">
