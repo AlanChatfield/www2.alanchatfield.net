@@ -1,4 +1,4 @@
-<div class="blog-cover {{.Params.banner}}" style="background-image: url('{{ with .Params.image }}{{ . }}{{ end }}')">
+<div class="blog-cover {{.Params.banner}}" style="background-image: url('{{ replace .Params.image "/static" "" }}')">
     <section>
         <div class="container">
             <h1 class="title">{{.Title}}</h1>
@@ -11,5 +11,3 @@
         </div>
     </section>			
 </div>
-{{.Params.image}}
-{{.Params.tags}}
