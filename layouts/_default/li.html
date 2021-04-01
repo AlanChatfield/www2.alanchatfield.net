@@ -4,7 +4,7 @@
 		<a href="{{ .Permalink }}" rel="prefetch">
 			<h2 class="title">{{ .Title }}</h2>
 			<p>{{ .Params.excerpt }}</p>
-			<div class="meta">{{ .Date.Format "2 Jan 2006" }} |  {{ .Params.tags }}</div>
+			<div class="meta">{{ .Date.Format "2 Jan 2006" }} | {{ partial "tags" . }}</div>
 		</a>
 	</div>
 </section>
