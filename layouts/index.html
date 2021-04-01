@@ -13,7 +13,7 @@
 <a href="/about/">Continue reading <span aria-hidden="true">→</span></a></p> 		
 				</div>
 			</section>
-		{{ range first 1 (where .Data.Pages "Type" "post") }}
+		{{ range first 1 (or (index .Site.Taxonomies.tags "digital-transformation") (index .Site.Taxonomies.tags "demand-creation") (index .Site.Taxonomies.tags "marketing-operations") (index .Site.Taxonomies.tags "marketing-technology")) }}
 			{{ .Render "li" }}
 		{{ end }}
 	</article>				
@@ -47,7 +47,7 @@
 		</nav>		
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
-		{{ range first 4 (index .Site.Taxonomies.tags "Marketing Technology") }}			
+		{{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}			
 			{{ .Render "li" }}
 		{{ end }}
 	</article>
@@ -58,7 +58,7 @@
 		</nav>		
 		<h2>News & Current Affairs</h2>
 		<p>Random asides and other off-topic thoughts about sport, politics and global affairs</p>
-		{{ range first 4 (index .Site.Taxonomies.tags "digital transformation") }}
+		{{ range first 4 (index .Site.Taxonomies.tags "digital-transformation") }}
 			{{ .Render "li" }}
 		{{ end }}
 	</article>
