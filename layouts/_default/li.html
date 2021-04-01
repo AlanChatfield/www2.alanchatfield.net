@@ -1,5 +1,5 @@
 <section class="index img">
-	<a href="{{ .Permalink }}" rel="prefetch"><img src="{{ with .Params.image }}{{ . }}{{ end }}" class="avatar {{ replace .Params.image "/static" "" }}"></img></a>
+	<a href="{{ .Permalink }}" rel="prefetch"><img src="{{ replace .Params.image "/static" "" }}" class="avatar"></img></a>
 	<div>
 		<a href="{{ .Permalink }}" rel="prefetch">
 			<h2 class="title">{{ .Title }}</h2>
