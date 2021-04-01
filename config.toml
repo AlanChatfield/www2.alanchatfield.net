@@ -7,5 +7,6 @@ disableKinds = ["taxonomyTerm"]
     unsafe = true
 [permalinks]
   post = "/:title/"
+  tags = "/tag/:slug/"
 [params]
   mainSections = ["marketing", "technology","martech","opinion"]
