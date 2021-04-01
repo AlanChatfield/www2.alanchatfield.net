@@ -13,7 +13,7 @@ package = "netlify-plugin-ghost-markdown"
   ghostURL = "https://alanchatfield.net"
 
   # Required: Content API key from the Integrations screen in Ghost Admin
-  ghostKey = "0789c1f3367a529c597084cc4d"
+  ghostKey = "c4a5a45a17f8efd564e3ca4b68"
 
   # Optional: Directory containing image assets (assets/images by default)
   assetsDir = "./static/img/"
