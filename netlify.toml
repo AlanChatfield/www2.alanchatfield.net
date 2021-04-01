@@ -19,10 +19,10 @@ package = "netlify-plugin-ghost-markdown"
   assetsDir = "./static/img/"
 
   # Optional: Directory containing pages (site root by default)
-  pagesDir = "./"
+  pagesDir = "./content/"
 
   # Optional: Directory containing posts (_posts/ directory by default)
-  postsDir = "./post/"
+  postsDir = "./content/post/"
 
   # Optional: Layout value for posts (post by default)
   postsLayout = "post"
