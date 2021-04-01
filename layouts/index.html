@@ -17,7 +17,7 @@
 			{{ .Render "li" }}
 
     {{ range (.GetTerms "tags") }}
-        <div class="{{ .LinkTitle }}">
+        <div class="{{ .LinkTitle | urlize }}">
     {{ end }}	
 		{{ end }}		
 </article>	
