@@ -3,7 +3,7 @@
 {{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.Description "bannerStyle" .Params.banner) }}
 
 <main class="container">
-      {{ $pages := (where .Site.RegularPages ".Params.tags" in (slice "politics" "sport" asides")) }}
+      {{ $pages := (where .Site.RegularPages ".Params.tags" "in" (slice "politics" "sport" asides")) }}
 				{{ $paginator := .Paginate $pages 10 }}	
 				{{ range $paginator.Pages.ByPublishDate.Reverse }}
             {{ .Render "li"}}
