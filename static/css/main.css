@@ -445,6 +445,7 @@ main.container>footer.post-navigation {border: none;padding-top: 2.5em;padding-b
 	article.long .index:last-child, article.long .index:first-child, article.grid .index { width: auto; }	
 	article.grid .index:nth-of-type(3), article.long .index:last-child .meta  { display: block }
 	main{padding:0px}
+	main.page-template, main.post-template {padding-top: 0em;}	
 	.page-template main, .post-template main, main, .page-template .index-cover + main.container {padding:0;}
 	body {padding-top:60px;}
 	main.container>.index{padding: 0px;margin:0.5em 0.5em 1em 0.5em;width:auto;}
