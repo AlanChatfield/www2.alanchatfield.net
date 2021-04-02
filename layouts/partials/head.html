@@ -1,21 +1,37 @@
 <head>
 
 	<title>{{ .Title }} - Alan Chatfield</title>
-	<link rel="stylesheet" href="/css/main.css" />
+	<meta name="description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}" />
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="stylesheet" href="/css/main.css" />
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">    
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/brands.css" integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">    
 
 	<!-- Favicons -->
-	<link rel="icon" type="image/png" href="/img/favicon.png">
-	<link rel="manifest" href="/manifest.json">
-	<meta name="theme-color" content="#109954">
+    	<link rel="alternate" type="application/rss+xml" title="Alan Chatfield" href="/blog/index.xml" />
+    	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">	
+	<link rel="shortcut icon" href="/img/favicon.ico">	
+	<link rel="manifest" href="/img/manifest.json">
+	<meta name="theme-color" content="#004225">	
 
 	<!-- Open Graph -->
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Alan Chatfield">
-	<meta property="og:url" content="/">
-	<meta property="og:image" content="/img/og-image.jpg">
+	<meta property="og:locale" content="en_GB">
+	<meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}">
+	<meta property="og:image" content="{{ if .Params.image }}{{.Params.image}}{{ else }}{{.Site.BaseURL}}/img/og-image.jpg{{ end }}">
+	<meta property="og:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
+	<meta property="og:url" content="{{ .Permalink }}" />	
+	<meta property="og:site_name" content="{{ .Site.Title }}">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}" />
+	<meta name="twitter:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}" />
+	<meta name="twitter:url" content="{{ .Permalink }}" />
+	<meta name="twitter:image" content="{{ if .Params.image }}{{.Params.image}}{{ else }}{{.Site.BaseURL}}/img/og-image.jpg{{ end }}" />
+	<meta name="twitter:site" content="@alan_chatfield" />	
 </head>
