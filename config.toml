@@ -3,10 +3,12 @@ languageCode = "en-gb"
 title = "Alan Chatfield"
 preserveTaxonomyNames = true
 disableKinds = ["taxonomyTerm"]
-[markup.goldmark.renderer]
-    unsafe = true
 [permalinks]
   post = "/:title/"
   tags = "/tag/:slug/"
 [params]
   mainSections = ["marketing", "technology","martech","opinion"]
+ [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true 
