@@ -3,7 +3,6 @@
 {{ partial "jumbotron" . }} 
 <main class="container">
     <article>
-        <div class="container">
             <header>
                 <h2 class="title xs-show">{{.Title}}</h2>		
                 <div class="meta">{{ .Date.Format "2 January 2006" }} | {{ partial "tags" . }}</div>			
@@ -17,9 +16,7 @@
                     Written by <strong><a rel="author" href="/about" title="Alan Chatfield">Alan Chatfield</a></strong><br>
                     <span class="muted">Digital Marketing Consultant at <a href="//crmtdigital.com">CRMT Digital</a> and Marketo Certified Solutions Architect. Advisor on marketing effectiveness and marketing technology optimisation.</span>                </p>
             </footer>
+    </article>         
           {{ partial "pager" . }}
-
-        </div>
-    </article> 
 </main>    
 {{ end }}
