@@ -1,21 +1,19 @@
     <footer class="site-footer">
         <div class="container">
  			<nav class="social links col-3">
-								<a href='/privacy-policy/'>Privacy</a>
+				<a href='/privacy-policy/'>Privacy</a>				
+				<a href='/privacy-policy/'>Privacy</a>
 			</nav>   
             <nav class="social col-3">
 					<a href='http://twitter.com/alan_chatfield' target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
 	<a href='https://www.linkedin.com/in/alan-chatfield' target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a>	
-	<a class="icon-feed" href="https://alanchatfield.net/rss/" title="RSS Feed"><i class="fas fa-rss fa-lg"></i></a>
+	<a class="icon-feed" href="/blog/index.xml" title="RSS Feed"><i class="fas fa-rss fa-lg"></i></a>
             </nav>
 			<nav class="copyright col-3">
-				&copy; <script>document.write(new Date().getFullYear())</script><noscript>2019</noscript> Alan Chatfield.
+				&copy; {{ .Date.Format "2006" }} Alan Chatfield.
 			</nav> 			
         </div>
     </footer>
-
-
-	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
 </body>
 
