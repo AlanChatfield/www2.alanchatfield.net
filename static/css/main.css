@@ -461,11 +461,12 @@ main.container>footer.post-navigation {border: none;padding-top: 2.5em;padding-b
 	.index-cover + main {padding-top: 0.6em;}
 	.index-cover + article.long { padding-top: 1.95em; }
 	.home-template .bx-wrapper + main {margin-top:0.6px;}
+	.blog-cover section {display: none}
 	.blog-cover, .blog-cover.index-cover, .blog-cover.author-cover{height:175px; min-height:0px}
 	.article-cover,.blog-cover{background-size: cover;}	
 	.blog-cover img{height:125px;width:auto}
 	.post-template .blog-cover section, .page-template .blog-cover section, .author-template .blog-cover section{display:none}
-	.page-template .index-cover section {display:flex}
+	.index-cover section {display:flex}
 	.blog-cover section a{display: none}
 	.blog-cover h1 {font-size:1.5em; color: #333}
 	.blog-cover h3 {font-size:1em; color: #333}
