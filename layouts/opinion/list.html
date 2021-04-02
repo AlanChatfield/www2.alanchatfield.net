@@ -3,7 +3,7 @@
 {{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.Description "bannerStyle" .Params.banner) }}
 
 <main class="container">
-      {{ $p := slice "politics" }}
+      {{ $p := slice "[politics]" }}
       {{ $pages := where .Site.RegularPages "Params.tags" "intersect" $p}}	
 				{{ $paginator := .Paginate $pages 10 }}	
 				{{ range $paginator.Pages.ByPublishDate.Reverse }}
