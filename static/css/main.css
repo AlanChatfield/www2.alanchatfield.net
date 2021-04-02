@@ -519,7 +519,7 @@ main.container>footer.post-navigation {border: none;padding-top: 2.5em;padding-b
 	main.container > aside { margin: 0em;padding-top: 0.25em; }
 	main .author img { margin: 0 12px 0 0; }
 	main .author .xs-show { display: inline;}
-	main.container>footer.post-navigation {border: none;margin-top: 1em;padding-top: 1em;padding-bottom: 1em;}
+	main.container>footer.post-navigation {border: none;padding-top: 1em;padding-bottom: 1em;}
 	.comment-navigation .nav-previous,.paging-navigation .nav-previous,.post-navigation .nav-previous {padding-right: 0.75em;font-size: 13px;}
 	.comment-navigation .nav-next,.paging-navigation .nav-next,.post-navigation .nav-next {padding-left: 0.75em;font-size: 13px;}
 	.xs-hide {display: none}
