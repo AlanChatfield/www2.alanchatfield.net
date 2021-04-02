@@ -185,6 +185,7 @@ a:hover{color:#00578A;text-decoration:none}
 .blog-cover.author-cover { min-height:500px; }
 .blog-cover section .container {margin-top: 75px;}
 .blog-cover.index-cover section .container {margin-top: 25px;}
+.blog-cover.index-cover.home { background-position:bottom 20% center; }
 .blog-cover section a:last-child{margin:1.5em 0 0 0}
 .blog-cover section a{color:#fff;border:0;width:36px;height:36px;border:2px solid #fff;display:inline-block;padding:8px 0;border-radius:42px;margin:1.5em 1em 0em 0;transition:0.2s all ease;line-height:0;text-align:center}
 .blog-cover section h3 a { margin: 0px; border: 0px; border-radius:0px; padding: 0px; display: inline;}
