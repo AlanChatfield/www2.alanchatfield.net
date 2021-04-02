@@ -1,20 +1,20 @@
 {{ define "main" }}
 
-<div class="blog-cover {{.Params.banner}}" style="background-image: url('{{ replace .Params.image "/static" "" }}')">
+
+<header class="blog-cover" style="background-image: url('{{ replace .Params.image "/static" "" }}')">>
     <section>
         <div class="container">
-            <h1 class="title">{{.Title}}</h1>
+            <h1>{{.Title}}</h1>
             <h3>{{.Params.excerpt}}</h3>	
         </div>
-    </section>			
-</div>
-<div class="page-template">
-<article>
-    <div class="container">
-        <section>
-      {{ .Content }}
-        </section>     
-    </div>
-</article>   
-</div>    
+    </section>
+</header>
+<main class="container">
+    <article>
+        <header>
+            <h2 class="title xs-show">{{.Title}}</h2>				
+        </header>    
+        {{ .Content }}
+    </article>
+</main>  
 {{ end }}
