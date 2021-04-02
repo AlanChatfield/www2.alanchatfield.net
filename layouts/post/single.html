@@ -18,7 +18,7 @@
             </footer>
     </article> 
     {{ $p := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology" "Digital Transformation") }}
-    {{ if in .Params.tags "Marketing Operations" "Demand Marketing" "Marketing Technology" "Digital Transformation" }}
+    {{ if eq .Params.tags "Marketing Operations" "Demand Marketing" "Marketing Technology" "Digital Transformation" }}
           {{ partial "pager2" . }}
     {{ else }}
           {{ partial "pager" . }}
