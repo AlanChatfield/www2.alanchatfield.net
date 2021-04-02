@@ -1,7 +1,7 @@
 ---
 title: "Marketing Technology"
 description: "News and tips from an expert in marketing automation"
-image: "https://source.unsplash.com/7mmy_-J7qyY/1920x1080"
+image: "/img/2021/01/photo-1500073794662-da188b2bc9ad-1.jpg"
 banner: dark
 type: "posts"
 url: /martech
