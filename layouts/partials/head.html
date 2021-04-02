@@ -24,7 +24,7 @@
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_GB">
 	<meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}">
-	<meta property="og:image" content="{{ if .Params.image }}{{.Site.BaseURL}}{{.Params.image}}{{ else }}{{.Site.BaseURL}}/img/og-image.jpg{{ end }}">
+	<meta property="og:image" content="{{ if .Params.image }}{{.Params.image | absURL}}{{ else }}{{.Site.BaseURL}}/img/og-image.jpg{{ end }}">
 	<meta property="og:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
 	<meta property="og:url" content="{{ .Permalink }}" />	
 	<meta property="og:site_name" content="{{ .Site.Title }}">
@@ -32,6 +32,6 @@
 	<meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}" />
 	<meta name="twitter:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}" />
 	<meta name="twitter:url" content="{{ .Permalink }}" />
-	<meta name="twitter:image" content="{{ if .Params.image }}{{.Site.BaseURL}}{{.Params.image}}{{ else }}{{.Site.BaseURL}}/img/og-image.jpg{{ end }}" />
+	<meta name="twitter:image" content="{{ if .Params.image | absURL }}{{.Params.image}}{{ else }}{{.Site.BaseURL}}/img/og-image.jpg{{ end }}" />
 	<meta name="twitter:site" content="@alan_chatfield" />	
 </head>
