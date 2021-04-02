@@ -4,7 +4,7 @@
 
 {{ range first 1 (or (index .Site.Taxonomies.tags "digital-transformation") (index .Site.Taxonomies.tags "demand-creation") (index .Site.Taxonomies.tags "marketing-operations") (index .Site.Taxonomies.tags "marketing-technology")) }}
     {{ range (.GetTerms "tags") }}
-        <main class="{{ .LinkTitle | urlize }}">
+        <main class="home-template {{ .LinkTitle | urlize }}">
     {{ end }}
 {{ end }}		
 	<article class="container grid long">			
