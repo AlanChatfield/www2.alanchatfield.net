@@ -252,7 +252,7 @@ article.info .pagination {padding: 1em 1%;}
 .site-nav #navigation ul.nav li:hover { background-color: rgba(16, 153, 84,0.15);}
 body.nav-hidden .site-nav{top:-100px;transition:all 0.35s ease;-webkit-transform:translate3d(0px, 0, 0px)}
 main, .page-template .index-cover + main.container{padding:1.5em;font-size:16px}
-.page-template main, .post-template main{padding:0;font-size:16px}
+main.page-template, main.post-template {padding:0;font-size:16px}
 .index-cover+article{padding-top:1.5em;}
 article+article{padding:0px}
 article.grid {padding: 0px;display: flex;flex-basis: 33.33%;}
@@ -397,7 +397,7 @@ main.container>footer.post-navigation {border: none;padding-top: 2.5em;padding-b
 	.container {max-width: 990px}
 	.blog-cover h1 { line-height: 1.2em;margin: 0 0.6em 0.3em;font-weight: 700;}
 	.blog-cover h3 { margin: 0 1.2em;}	
-	.page-template main, .post-template main, main,main, .page-template .index-cover + main.container {padding-top: 0.9em;}
+	main.page-template, main.post-template, main,main, .page-template .index-cover + main.container {padding-top: 0.9em;}
 	.index { margin: 0 0.9em 0.9em;}
 	.blog-cover section{background-color:rgba(0,0,0,0.45);}	
 	.index-cover + main {  padding-top: 0.9em;}
@@ -417,7 +417,7 @@ main.container>footer.post-navigation {border: none;padding-top: 2.5em;padding-b
 	.container {max-width: 990px}
 	.blog-cover h1 { line-height: 1.2em;margin: 0 0.6em 0.3em;font-weight: 700;}
 	.blog-cover h3 { margin: 0 1.2em;}	
-	.page-template main, .post-template main, main, main, .page-template .index-cover + main.container {padding-top: 0.9em;}
+	main.page-template, main.post-template, main, main, .page-template .index-cover + main.container {padding-top: 0.9em;}
 	.index { margin: 0 0.9em 0.9em;}
 	.blog-cover section{background-color:rgba(0,0,0,0.45);}	
 	.index-cover + main {  padding-top: 0.9em;}
