@@ -23,7 +23,7 @@
 
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_GB">
-	<meta property="og:title" content="{{ if .IsPage }}{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}{{ else }}{{ if .Title }}{{ .Title }}: {{ end }}{{ .Site.Title }}: Marketing via Technology{{ end }}">
+	<meta property="og:title" content="{{ if .IsPage }}{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}{{ else }}{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}: Marketing via Technology{{ end }}">
 	<meta property="og:image" content="{{ if .IsPage }}{{ if .Params.image }}{{.Params.image | absURL}}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}">
 	<meta property="og:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
 	<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
@@ -40,7 +40,7 @@
 
 	
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}" />
+	<meta name="twitter:title" content="{{ if .IsPage }}{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ else }}{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}" />
 	<meta name="twitter:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}" />
 	<meta name="twitter:url" content="{{ .Permalink }}" />
 	<meta name="twitter:image" content="{{ if .IsPage }}{{ if .Params.image }}{{.Params.image | absURL}}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}" />
@@ -91,7 +91,7 @@
 	    "name": "Alan Chatfield",
 	    "url": {{.Site.BaseURL}}
 	  },
-	  "name": "{{ .Title }}",	  
+	  "name": "{{ .Title }} - Alan Chatfield",	  
 	  "url": {{ .Permalink }},
 	  "image": "{{.Site.BaseURL  | safeHTML}}img/og-image.jpg",
 	  "description": "{{ .Description | plainify | safeHTML }}"
