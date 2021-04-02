@@ -16,7 +16,12 @@
                     Written by <strong><a rel="author" href="/about" title="Alan Chatfield">Alan Chatfield</a></strong><br>
                     <span class="muted">Digital Marketing Consultant at <a href="//crmtdigital.com">CRMT Digital</a> and Marketo Certified Solutions Architect. Advisor on marketing effectiveness and marketing technology optimisation.</span>                </p>
             </footer>
-    </article>         
+    </article> 
+    {{ $p := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology" "Digital Transformation") }}
+    {{ if in .Params.tags $p }}
           {{ partial "pager2" . }}
+    {{ else }}
+          {{ partial "pager" . }}
+    {{ end }}
 </main>    
 {{ end }}
