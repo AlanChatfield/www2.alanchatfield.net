@@ -24,7 +24,7 @@
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_GB">
 	<meta property="og:title" content="{{ if .IsPage }}{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}{{ else }}{{ if .Title }}{{ .Title }}: {{ end }}{{ .Site.Title }}: Marketing via Technology{{ end }}">
-	<meta property="og:image" content="{{ if .Params.image }}{{.Params.image | absURL }}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}">
+	<meta property="og:image" content="{{ if .IsPage }}{{ if .Params.image }}{{.Params.image | absURL}}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}">
 	<meta property="og:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
 	<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 	<meta property="og:url" content="{{ .Permalink }}" />	
@@ -43,7 +43,7 @@
 	<meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}" />
 	<meta name="twitter:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}" />
 	<meta name="twitter:url" content="{{ .Permalink }}" />
-	<meta name="twitter:image" content="{{ if .Params.image }}{{.Params.image | absURL}}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}" />
+	<meta name="twitter:image" content="{{ if .IsPage }}{{ if .Params.image }}{{.Params.image | absURL}}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}" />
 	<meta name="twitter:site" content="@alan_chatfield" />	
 	
 	
@@ -90,14 +90,12 @@
 	    "@type": "Person",
 	    "name": "Alan Chatfield",
 	    "url": {{.Site.BaseURL}}
-	  },	  
-	  "url": {{ .Site.BaseURL }},
-	  "sameAs": [
-            "https://www.linkedin.com/in/alan-chatfield",
-            "https://twitter.com/alan_chatfield"
-	  ]
-	},
-	"description": "{{ .Description | plainify | safeHTML }}"
+	  },
+	  "name": "{{ .Title }}",	  
+	  "url": {{ .Permalink }},
+	  "image": "{{.Site.BaseURL}}img/og-image.jpg",
+	  "description": "{{ .Description | plainify | safeHTML }}"
+	}
 	{{ end }}
 	</script>
 </head>
