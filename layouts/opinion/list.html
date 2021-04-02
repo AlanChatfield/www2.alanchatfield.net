@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+{{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.Description "bannerStyle" .Params.banner) }}
+
+<main class="container">
+      {{ $pages := (where (or (index .Site.Taxonomies.tags "politics") (index .Site.Taxonomies.tags "sport") (index .Site.Taxonomies.tags "asides"))) }}
+				{{ $paginator := .Paginate $pages 19 }}	
+				{{ range $paginator.Pages.ByPublishDate.Reverse }}
+            {{ .Render "li"}}
+      {{ end }}
+  {{ partial "pagination" . }}
+</main>
+
+{{end}}
