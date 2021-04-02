@@ -53,9 +53,9 @@
 	  "@context": "https://schema.org",
 	  "@type": "Article",
 	  "headline": "{{ .Title }}",
-	  "image": "{{ .Params.image | absURL }}",
-	  "datePublished": "{{ .PublishDate }}",
-	  "dateModified": "{{ .Lastmod }}",
+	  "image": {{ .Params.image | absURL }},
+	  "datePublished": {{ .PublishDate }},
+	  "dateModified": {{ .Lastmod }},
 	  "author": {
 		"@type": "Person",
 		"name": "Alan Chatfield",
@@ -72,12 +72,12 @@
 	  },
 	  "mainEntityOfPage": {
 		"@type": "WebPage",
-		"@id": "{{ .Site.BaseURL }}"
+		"@id": {{ .Site.BaseURL }}
 	  },
 	  "publisher": {
 	    "@type": "Person",
 	    "name": "Alan Chatfield",
-	    "url": "{{.Site.BaseURL}}"
+	    "url": {{.Site.BaseURL}}
 	  },
 	  "description": "{{ .Params.excerpt | plainify | safeHTML }}",
 	  "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
@@ -89,15 +89,15 @@
  	  "publisher": {
 	    "@type": "Person",
 	    "name": "Alan Chatfield",
-	    "url": "{{.Site.BaseURL}}"
+	    "url": {{.Site.BaseURL}}
 	  },	  
-	  "url": "{{ .Site.BaseURL }}",
+	  "url": {{ .Site.BaseURL }},
 	  "sameAs": [
             "https://www.linkedin.com/in/alan-chatfield",
             "https://twitter.com/alan_chatfield"
 	  ]
 	},
-	"description": "{{ .Params.excerpt | plainify | safeHTML }}"
+	"description": "{{ .Description | plainify | safeHTML }}"
 	{{ end }}
 	</script>
 </head>
