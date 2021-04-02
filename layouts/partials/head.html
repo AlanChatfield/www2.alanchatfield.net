@@ -93,7 +93,7 @@
 	  },
 	  "name": "{{ .Title }}",	  
 	  "url": {{ .Permalink }},
-	  "image": "{{.Site.BaseURL}}img/og-image.jpg",
+	  "image": "{{.Site.BaseURL  | safeHTML}}img/og-image.jpg",
 	  "description": "{{ .Description | plainify | safeHTML }}"
 	}
 	{{ end }}
