@@ -27,10 +27,10 @@
 
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="/{{.Params.section2.link}}">See more <span aria-hidden="true">→</span></a>
+			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
-		<h2>{{.Params.section2.heading}}</h2>
-		<p>{{.Params.section2.text}}</p>
+		<h2>{{.Params.section1.heading}}</h2>
+		<p>{{.Params.section1.text}}</p>
 	</article>		
 	<article class="container grid marketing-operations">	
 		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-operations") }}		
@@ -40,9 +40,9 @@
 
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
+			<a class="older-posts" href="/{{.Params.section2.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
-		<h2>{{.Params.section1.heading}}</h2>
+		<h2>{{.Params.section2.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
 	</article>
 	<article class="container grid demand-creation">	
