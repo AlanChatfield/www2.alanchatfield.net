@@ -1,4 +1,4 @@
-{{ with .Resources.GetMatch "image" }}
+{{ with .Params.image }}
   
 {{ $image := index .Params.image }}
 {{ $src := resources.Get $image }}
