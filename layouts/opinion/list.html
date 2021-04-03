@@ -1,5 +1,5 @@
 {{ define "main" }}
-
+{{ partial "bannerimage" . }}
 {{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.Description "bannerStyle" .Params.banner) }}
 
 <main class="container">
