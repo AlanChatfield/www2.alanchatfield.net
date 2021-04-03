@@ -2,3 +2,4 @@
 
 * Ghost Webhook
 * Redirects
+* Responsive Images
