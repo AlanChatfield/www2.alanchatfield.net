@@ -1,13 +1,6 @@
-{{ with .Params.image }}
-    {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
-    {{ $resized := $imageResource.Fill "475x" }}
-    <img src="{{ $resized.RelPermalink }}" />
-{{ end }}
-
 <style>
 .blog-cover { background-image: url({{ .Params.image }}) }	
-{{ with .Resources.GetMatch "image" }}
-  
+{{ with .Params.image }} 
 {{ $image := index .Params.image }}
 {{ $src := resources.Get $image }}
 {{ $full := $src.Resize "1920x" }}	
