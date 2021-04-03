@@ -1,20 +1,5 @@
 {{ define "main" }}
-{{ if .Params.image }}
-<style>
-.blog-cover { background-image: url({{ .Params.image }}) }	 
-{{ $src := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
-{{ with $src }} 
-{{ $large := $src.Resize "1200x" }}	
-{{ $medium := $src.Resize "750x" }}
-{{ $small := $src.Resize "475x" }}
-
-@media (max-width: 1023px){ .blog-cover { background-image: url({{ $large.Permalink }})} }
-@media (max-width: 767px){ .blog-cover { background-image: url({{ $medium.Permalink }})} }
-@media (max-width: 480px){ .blog-cover { background-image: url({{ $small.Permalink }})} }	
-{{ end }}
-</style>
-{{ end }}
-<header class="blog-cover">
+<header class="blog-cover" style="background-image: url('{{ replace .Params.image "/static" "" }}')">
     <section>
         <div class="container">
             <h1>{{.Title}}</h1>
