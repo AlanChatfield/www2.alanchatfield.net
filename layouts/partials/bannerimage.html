@@ -1,9 +1,8 @@
 <style>
 .blog-cover { background-image: url({{ .Params.image }}) }	
-{{ with .Params.image }} 
 {{ $image := index .Params.image }}
-{{ $src := resources.Get $image }}
-{{ $full := $src.Resize "1920x" }}	
+{{ $src := resources.Get $image }} 
+{{ with .Params.image }} 
 {{ $large := $src.Resize "1200x" }}	
 {{ $medium := $src.Resize "750x" }}
 {{ $small := $src.Resize "475x" }}
