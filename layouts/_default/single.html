@@ -1,13 +1,4 @@
 {{ define "main" }}
-<style>
-{{- $image := resources.Get .Params.image -}}    
-    
-	.blog-cover { background-image: url({{ .Params.image }}) }
-	@media (max-width: 1023px){ .blog-cover { background-image: url({{ $image := $resource.Resize "1200x" }})} }
-	@media (max-width: 767px){ .blog-cover { background-image: url({{ $image := $resource.Resize "750x" }})} }
-	@media (max-width: 480px){ .blog-cover { background-image: url({{ $image := $resource.Resize "475x" }})} }
-</style>
-
 <header class="blog-cover">
     <section>
         <div class="container">
