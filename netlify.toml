@@ -10,7 +10,7 @@ package = "netlify-plugin-ghost-markdown"
 
   [plugins.inputs]
   # Required: Your Ghost domain, must not end in a trailing slash
-  ghostURL = "https://alanchatfield.net"
+  ghostURL = "https://alanchatfield.ghost.io"
 
   # Required: Content API key from the Integrations screen in Ghost Admin
   ghostKey = "c4a5a45a17f8efd564e3ca4b68"
