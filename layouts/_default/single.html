@@ -1,5 +1,19 @@
 {{ define "main" }}
-{{ partial "bannerimage" . }}
+{{ if .Params.image }}
+<style>
+.blog-cover { background-image: url({{ .Params.image }}) }	 
+{{ $src := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
+{{ with $src }} 
+{{ $large := $src.Resize "1200x" }}	
+{{ $medium := $src.Resize "750x" }}
+{{ $small := $src.Resize "475x" }}
+
+@media (max-width: 1023px){ .blog-cover { background-image: url({{ $large.Permalink }})} }
+@media (max-width: 767px){ .blog-cover { background-image: url({{ $medium.Permalink }})} }
+@media (max-width: 480px){ .blog-cover { background-image: url({{ $small.Permalink }})} }	
+{{ end }}
+</style>
+{{ end }}
 <header class="blog-cover">
     <section>
         <div class="container">
