@@ -1,7 +1,6 @@
-{{ with .Params.image }}
-  
 {{ $image := index .Params.image }}
 {{ $src := resources.Get $image }}
+{{ with .Params.image }}
 {{ $medium := $src.Resize "750x" }}
 {{ $small := $src.Resize "475x" }}
 {{ $tiny := $src.Resize "340x" }}
