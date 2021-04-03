@@ -2,7 +2,6 @@
   
 {{ $image := index .Params.image }}
 {{ $src := resources.Get $image }}
-{{ $full := $resource.Resize "1920x" }}	
 {{ $large := $src.Resize "1200x" }}	
 {{ $medium := $src.Resize "750x" }}
 {{ $small := $src.Resize "475x" }}
