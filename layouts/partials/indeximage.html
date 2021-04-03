@@ -5,8 +5,7 @@
 {{ $medium := $src.Resize "750x" }}
 {{ $small := $src.Resize "475x" }}
 {{ $tiny := $src.Resize "340x" }}
-
+srcset="{{ $tiny.RelPermalink }} 340w, {{ $small.RelPermalink }} 475w, {{ $medium.RelPermalink }} 750w"
+sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px"
 {{ end }} 
- 			srcset="{{ $tiny.RelPermalink }} 340w, {{ $small.RelPermalink }} 475w, {{ $medium.RelPermalink }} 750w"
-			sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px"
-			src="{{ .Params.image }}" 
+src="{{ .Params.image }}" 
