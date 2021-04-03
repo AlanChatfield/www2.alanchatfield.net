@@ -1,4 +1,5 @@
 <style>
+.blog-cover { background-image: url({{ .Params.image }}) }	
 {{ with .Resources.GetMatch "image" }}
   
 {{ $image := index .Params.image }}
@@ -8,9 +9,8 @@
 {{ $medium := $src.Resize "750x" }}
 {{ $small := $src.Resize "475x" }}
 
+@media (max-width: 1023px){ .blog-cover { background-image: url({{ $large.RelPermalink }})} }
+@media (max-width: 767px){ .blog-cover { background-image: url({{ $medium.RelPermalink }})} }
+@media (max-width: 480px){ .blog-cover { background-image: url({{ $small.RelPermalink }})} }	
 {{ end }} 
-	.blog-cover { background-image: url({{ .Params.image }}) }
-	@media (max-width: 1023px){ .blog-cover { background-image: url({{ $large.RelPermalink }})} }
-	@media (max-width: 767px){ .blog-cover { background-image: url({{ $medium.RelPermalink }})} }
-	@media (max-width: 480px){ .blog-cover { background-image: url({{ $small.RelPermalink }})} }
 </style>
