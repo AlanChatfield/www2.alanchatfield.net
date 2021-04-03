@@ -4,7 +4,6 @@ title = "Alan Chatfield"
 description = "Views from the intersection of digital marketing and enterprise technology"
 preserveTaxonomyNames = true
 disableKinds = ["taxonomyTerm"]
-assetDir = "assets"
 [permalinks]
   post = "/:title/"
   tags = "/tag/:slug/"
