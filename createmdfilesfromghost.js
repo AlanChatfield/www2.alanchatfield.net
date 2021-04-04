@@ -30,7 +30,7 @@ const createMdFilesFromGhost = async () => {
                 description: post.meta_description || post.excerpt,
                 pagetitle: post.title,
                 slug: post.slug,
-                feature_image: post.feature_image,
+                image: post.feature_image,
                 lastmod: post.updated_at,
                 date: post.published_at,
                 excerpt: post.excerpt,
