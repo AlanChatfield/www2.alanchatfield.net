@@ -50,7 +50,7 @@
 	<meta name="twitter:title" content="{{ if .IsPage }}{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ else }}{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}" />
 	<meta name="twitter:description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}" />
 	<meta name="twitter:url" content="{{ .Permalink }}" />
-	<meta name="twitter:image" content="{{ if .IsPage }}{{ if .Params.image }}{{.Params.image | absURL}}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}{{ else }}{{.Site.BaseURL}}img/og-image.jpg{{ end }}" />
+	<meta name="twitter:image" content="{{ if .IsPage }}{{ if .Params.image }}{{.Params.image | absURL}}{{ else }}https://alanchatfield.ghost.io/content/images/2021/01/og-image.png{{ end }}{{ else }}https://alanchatfield.ghost.io/content/images/2021/01/og-image.png{{ end }}" />
 	<meta name="twitter:site" content="@alan_chatfield" />	
 	
 	
@@ -100,7 +100,7 @@
 	  },
 	  "name": "{{ .Title }} - Alan Chatfield",	  
 	  "url": {{ .Permalink }},
-	  "image": "{{.Site.BaseURL | safeJS }}img/og-image.jpg",
+	  "image": "https://alanchatfield.ghost.io/content/images/2021/01/og-image.png",
 	  absURL
 	  "description": "{{ .Description | plainify | safeHTML }}"
 	}
