@@ -1,5 +1,5 @@
 # alanchatfield.net
 
 * Ghost Webhook
+* Pages Integration
 * Redirects
-* Responsive Images
