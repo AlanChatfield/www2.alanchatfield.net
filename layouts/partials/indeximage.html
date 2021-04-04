@@ -1,9 +1,0 @@
-{{ $image := index .Params.image }}
-{{ $src := ($.Site.GetPage "section" "images").Resources.GetMatch (strings.TrimPrefix "/images/" . ) }}
-{{ with $src }} 
-{{ $medium := $src.Resize "750x" }}
-{{ $small := $src.Resize "475x" }}
-{{ $tiny := $src.Resize "340x" }}
-srcset="{{ $tiny.Permalink }} 340w, {{ $small.Permalink }} 475w, {{ $medium.Permalink }} 750w"
-sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px"
-{{ end }} 
