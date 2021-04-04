@@ -3,11 +3,6 @@ const yaml = require('js-yaml');
 const fs = require('fs-extra');
 const path = require('path');
 
-// On Netlify,these environment variables are set in the admin.
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
-
 const ghostURL = process.env.GHOST_URL;
 const ghostKey = process.env.GHOST_KEY;
 const api = new GhostContentAPI({
