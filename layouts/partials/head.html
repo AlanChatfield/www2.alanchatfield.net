@@ -100,7 +100,8 @@
 	  },
 	  "name": "{{ .Title }} - Alan Chatfield",	  
 	  "url": {{ .Permalink }},
-	  "image": "{{ "/img/og-image.jpg" | absURL }},
+	  "image": {{.Site.BaseURL}}img/og-image.jpg,
+	  absURL
 	  "description": "{{ .Description | plainify | safeHTML }}"
 	}
 	{{ end }}
