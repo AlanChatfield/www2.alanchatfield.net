@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: "Effective Date: 25th June 2018"
+excerpt: "Effective Date: 29th December 2020"
 image: "https://alanchatfield.ghost.io/content/images/2020/12/mountain-road-1556177_rgb-1.jpg"
 ---
 
