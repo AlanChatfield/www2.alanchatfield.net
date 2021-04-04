@@ -4,3 +4,6 @@ HUGO_ENV = "production"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.71.1"
+
+[build]
+    command = "npm run generate && hugo -b $URL/"
