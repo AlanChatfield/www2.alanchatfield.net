@@ -7,9 +7,9 @@
 {{ $medium := $src.Resize "750x" }}
 {{ $small := $src.Resize "475x" }}
 
-@media (max-width: 1023px){ .blog-cover { background-image: url({{ $large.Permalink }})} }
-@media (max-width: 767px){ .blog-cover { background-image: url({{ $medium.Permalink }})} }
-@media (max-width: 480px){ .blog-cover { background-image: url({{ $small.Permalink }})} }	
+@media (max-width: 1023px){ .blog-cover { background-image: url({{ .Params.image }})} }
+@media (max-width: 767px){ .blog-cover { background-image: url({{ .Params.image }})} }
+@media (max-width: 480px){ .blog-cover { background-image: url({{ .Params.image }})} }	
 {{ end }}
 </style>
 {{ end }}
