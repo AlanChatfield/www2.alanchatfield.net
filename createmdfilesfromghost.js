@@ -184,7 +184,7 @@ const createMdFilesFromGhost = async () => {
             const fileString = `---\n${yamltag}\n---\n`;
 
             // Save the final string of our file as a Markdown file
-            await fs.writeFile(path.join('content', `tags\${tag.slug}\_index.md`), fileString, { flag: 'w' });
+            await fs.writeFile(path.join('content/tags/', `${tag.slug}`, '/_index.md'), fileString, { flag: 'w' });
         }));
 
     console.timeEnd('All tags converted to Markdown in');
