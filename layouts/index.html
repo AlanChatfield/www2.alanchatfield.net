@@ -21,7 +21,7 @@
 				</div>
 			</section>
 		{{ range first 1 (or (index .Site.Taxonomies.tags "digital-transformation") (index .Site.Taxonomies.tags "demand-creation") (index .Site.Taxonomies.tags "marketing-operations") (index .Site.Taxonomies.tags "marketing-technology")) }}
-			{{ .Render "li" }}
+			{{ .Render "summary" }}
 		{{ end }}		
 	</article>
 
