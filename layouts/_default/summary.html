@@ -1,0 +1,11 @@
+<section class="index img">
+	<a href="{{ .Permalink }}" rel="prefetch"><img srcset="{{ replace .Params.image "/content/images/" "/content/images/size/w750/" }} 750w, {{ replace .Params.image "/content/images/" "/content/images/size/w475/" }} 475w, {{ replace .Params.image "/content/images/" "/content/images/size/w750/" }} 750w"
+sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px" src="{{ replace .Params.image "/content/images/" "/content/images/size/w750/" }}" class="avatar"></img></a>
+	<div>
+		<a href="{{ .Permalink }}" rel="prefetch">
+			<h2 class="title">{{ .Title }}</h2>
+			<p>{{ .Params.excerpt }}</p>
+			<div class="meta">{{ .Date.Format "2 Jan 2006" }} | {{ partial "tags" . }}</div>
+		</a>
+	</div>
+</section>
