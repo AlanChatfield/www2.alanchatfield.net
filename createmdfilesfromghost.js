@@ -15,7 +15,7 @@ const createMdFilesFromGhost = async () => {
     console.time('All posts converted to Markdown in');
 
     try {
-        // Fetch the posts from the Ghost Content API
+        // Fetch  posts from the Ghost Content API
         const posts = await api.posts.browse({
             limit: 'all',
             include: 'tags,authors',
@@ -50,8 +50,8 @@ const createMdFilesFromGhost = async () => {
             // The format of og_image is /content/images/2020/04/social-image-filename.jog
             // without the root of the URL. Prepend if necessary.
             let ogImage = post.og_image || post.feature_image || '';
-            if (!ogImage.includes('https://alanchatfield.net')) {
-                ogImage = 'https://alanchatfield.net' + ogImage
+            if (!ogImage.includes('https://alanchatfield.ghost.io')) {
+                ogImage = 'https://alanchatfield.ghost.io' + ogImage
             }
             frontmatter.og_image = ogImage;
 
@@ -78,6 +78,68 @@ const createMdFilesFromGhost = async () => {
     } catch (error) {
         console.error(error);
     }
+
+    console.time('All pages converted to Markdown in');	
+    try {
+        // Fetch pages from the Ghost Content API
+        const pages = await api.pages.browse({
+            limit: 'all',
+            formats: ['html'],
+        });
+
+        await Promise.all(pages.map(async (page) => {
+            let content = page.html;
+            
+            const frontmatter = {
+                title: page.meta_title || page.title,
+                description: page.meta_description || page.excerpt,
+                pagetitle: page.title,
+                slug: page.slug,
+                image: page.feature_image,
+                lastmod: page.updated_at,
+                date: page.published_at,
+                excerpt: page.excerpt,
+                i18nlanguage: 'en', // Change for your language
+                weight: page.featured ? 1 : 0,
+                draft: page.visibility !== 'public',
+            };
+
+            if (page.og_title) {
+                frontmatter.og_title = page.og_title
+            }
+
+            if (page.og_description) {
+                frontmatter.og_description = page.og_description
+            }
+
+            // The format of og_image is /content/images/2020/04/social-image-filename.jog
+            // without the root of the URL. Prepend if necessary.
+            let ogImage = page.og_image || page.feature_image || '';
+            if (!ogImage.includes('https://alanchatfield.ghost.io')) {
+                ogImage = 'https://alanchatfield.ghost.io' + ogImage
+            }
+            frontmatter.og_image = ogImage;
+
+            // If there's a canonical url, please add it.
+            if (page.canonical_url) {
+                frontmatter.canonical = page.canonical_url;
+            }
+
+            // Create frontmatter properties from all keys in our page object
+            const yamlpage = await yaml.dump(frontmatter);
+
+            // Super simple concatenating of the frontmatter and our content
+            const fileString = `---\n${yamlpage}\n---\n${content}\n`;
+
+            // Save the final string of our file as a Markdown file
+            await fs.writeFile(path.join('content', `${page.slug}.md`), fileString, { flag: 'w' });
+        }));
+
+    console.timeEnd('All pages converted to Markdown in');
+    } catch (error) {
+        console.error(error);
+    }
+	
 };
 
 module.exports = createMdFilesFromGhost();
