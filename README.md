@@ -1,4 +1,3 @@
 # alanchatfield.net
 
-* Pages Integration
-* Redirects
+* Tags Integration
