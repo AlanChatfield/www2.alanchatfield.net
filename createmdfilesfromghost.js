@@ -160,7 +160,6 @@ const createMdFilesFromGhost = async () => {
 		type: "'posts'",
 		banner: 'dark',
                 i18nlanguage: 'en', // Change for your language
-                weight: tag.featured ? 1 : 0,
                 draft: tag.visibility !== 'public',
             };
 
@@ -202,7 +201,7 @@ const createMdFilesFromGhost = async () => {
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir);
             }			
-
+            console.log = fileString;
             // Save the final string of our file as a Markdown file
             await fs.writeFile(path.join('content', 'tags', `${tagname}`, '_index.md'), fileString, { flag: 'w' });
         }));
