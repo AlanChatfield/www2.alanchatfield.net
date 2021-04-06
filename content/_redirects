@@ -11,4 +11,4 @@
 /tag/sport/		/opinion/sport/	301
 /rss/	/blog/index.xml	301
 /opinion/*  /:splat  301
-/content/images/*  https://alanchatfield.net/content/images/:splat  301
+/content/images/*  https://alanchatfield.ghost.io/content/images/:splat  301
