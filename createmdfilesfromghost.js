@@ -149,7 +149,10 @@ const createMdFilesFromGhost = async () => {
         });
 
         await Promise.all(tags.map(async (tag) => {
-            
+            let tagname = tag.name;
+            let tagname = tagname.toLowerCase();
+            let tagname = tagname.replace("","-");
+		
             const frontmatter = {
                 title: tag.name,
                 description: tag.description,
@@ -195,14 +198,14 @@ const createMdFilesFromGhost = async () => {
 
             // Super simple concatenating of the frontmatter and our content
             const fileString = `---\n${yamltag}\n---`;
-            const dir = path.join('content', 'tags', `${tag.slug}`);
+            const dir = path.join('content', 'tags', `${tagname}`);
 			
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir);
             }			
 
             // Save the final string of our file as a Markdown file
-            await fs.writeFile(path.join('content', 'tags', `${tag.slug}`, `_index.md`), fileString, { flag: 'w' });
+            await fs.writeFile(path.join('content', 'tags', `${tagname}`, `_index.md`), fileString, { flag: 'w' });
         }));
 
     console.timeEnd('All tags converted to Markdown in');
