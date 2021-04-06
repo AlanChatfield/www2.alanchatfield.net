@@ -10,3 +10,4 @@
 /tag/politics/		/opinion/politics/	301
 /tag/sport/		/opinion/sport/	301
 /rss/	/blog/index.xml	301
+/opinion/*  /:splat  301
