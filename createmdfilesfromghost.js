@@ -201,7 +201,7 @@ const createMdFilesFromGhost = async () => {
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir);
             }			
-            console.log = fileString;
+
             // Save the final string of our file as a Markdown file
             await fs.writeFile(path.join('content', 'tags', `${tagname}`, '_index.md'), fileString, { flag: 'w' });
         }));
