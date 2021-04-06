@@ -150,8 +150,8 @@ const createMdFilesFromGhost = async () => {
 
         await Promise.all(tags.map(async (tag) => {
             let tagname = tag.name;
-            let tagname = tagname.toLowerCase();
-            let tagname = tagname.replace("","-");
+            tagname = tagname.toLowerCase();
+            tagname = tagname.replace("","-");
 		
             const frontmatter = {
                 title: tag.name,
