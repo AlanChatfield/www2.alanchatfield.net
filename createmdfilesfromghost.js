@@ -155,14 +155,18 @@ const createMdFilesFromGhost = async () => {
                 description: tag.description,
                 image: tag.feature_image,
 		banner: 'dark',
+		url: tag.slug,
                 i18nlanguage: 'en', // Change for your language
                 weight: tag.featured ? 1 : 0,
                 draft: tag.visibility !== 'public',
             };
 
-            if (tag.slug) {
-                frontmatter.slug = tag.slug.replace('/tag/', '/')
-            }
+            let accentColor = tag.accent_color || '';	
+            if (accentColor == "#00578A") {
+                frontmatter.url = "/opinion/" + tag.slug;
+            } else {
+                frontmatter.url = "/" + tag.slug;		    
+            }		    
 		
             if (tag.og_title) {
                 frontmatter.og_title = tag.og_title
