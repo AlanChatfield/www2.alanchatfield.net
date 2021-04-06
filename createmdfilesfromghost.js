@@ -140,7 +140,67 @@ const createMdFilesFromGhost = async () => {
     } catch (error) {
         console.error(error);
     }
-	
+    console.time('All tags converted to Markdown in');	
+    try {
+        // Fetch tags from the Ghost Content API
+        const tags = await api.tags.browse({
+            limit: 'all',
+            filter: 'visibility:public'
+        });
+
+        await Promise.all(tags.map(async (tag) => {
+            
+            const frontmatter = {
+                title: tag.name,
+                description: tag.description,
+                slug: tag.slug,
+                image: tag.feature_image,
+				banner: 'dark',
+                i18nlanguage: 'en', // Change for your language
+                weight: tag.featured ? 1 : 0,
+                draft: tag.visibility !== 'public',
+            };
+
+            if (tag.og_title) {
+                frontmatter.og_title = tag.og_title
+            }
+
+            if (tag.og_description) {
+                frontmatter.og_description = tag.og_description
+            }
+
+            // The format of og_image is /content/images/2020/04/social-image-filename.jog
+            // without the root of the URL. Prepend if necessary.
+            let ogImage = tag.og_image || tag.feature_image || '';
+            if (!ogImage.includes('https://alanchatfield.ghost.io')) {
+                ogImage = 'https://alanchatfield.ghost.io' + ogImage
+            }
+            frontmatter.og_image = ogImage;
+
+            // If there's a canonical url, please add it.
+            if (tag.canonical_url) {
+                frontmatter.canonical = tag.canonical_url;
+            }
+
+            // Create frontmatter properties from all keys in our tag object
+            const yamltag = await yaml.dump(frontmatter);
+
+            // Super simple concatenating of the frontmatter and our content
+            const fileString = `---\n${yamltag}\n---\n`;
+            const dir = path.join('content', `${tag.slug}`);
+			
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir);
+            }			
+
+            // Save the final string of our file as a Markdown file
+            await fs.writeFile(path.join('content', `${tag.slug}`, `_index.md`), fileString, { flag: 'w' });
+        }));
+
+    console.timeEnd('All tags converted to Markdown in');
+    } catch (error) {
+        console.error(error);
+    }	
 };
 
 module.exports = createMdFilesFromGhost();
