@@ -157,9 +157,8 @@ const createMdFilesFromGhost = async () => {
                 title: tag.name,
                 description: tag.description,
                 image: tag.feature_image,
-		type: '"posts"',
+		type: "'posts'",
 		banner: 'dark',
-		url: tag.slug,
                 i18nlanguage: 'en', // Change for your language
                 weight: tag.featured ? 1 : 0,
                 draft: tag.visibility !== 'public',
