@@ -155,7 +155,7 @@ const createMdFilesFromGhost = async () => {
                 description: tag.description,
                 slug: tag.slug,
                 image: tag.feature_image,
-				banner: 'dark',
+		banner: 'dark',
                 i18nlanguage: 'en', // Change for your language
                 weight: tag.featured ? 1 : 0,
                 draft: tag.visibility !== 'public',
@@ -187,7 +187,7 @@ const createMdFilesFromGhost = async () => {
 
             // Super simple concatenating of the frontmatter and our content
             const fileString = `---\n${yamltag}\n---\n`;
-            const dir = path.join('content', `${tag.slug}`);
+            const dir = path.join('content', 'tags', `${tag.slug}`);
 			
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir);
