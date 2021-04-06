@@ -157,7 +157,7 @@ const createMdFilesFromGhost = async () => {
                 title: tag.name,
                 description: tag.description,
                 image: tag.feature_image,
-		type: 'posts',
+		type: '"posts"',
 		banner: 'dark',
 		url: tag.slug,
                 i18nlanguage: 'en', // Change for your language
@@ -205,7 +205,7 @@ const createMdFilesFromGhost = async () => {
             }			
 
             // Save the final string of our file as a Markdown file
-            await fs.writeFile(path.join('content', 'tags', `${tagname}`, `_index.md`), fileString, { flag: 'w' });
+            await fs.writeFile(path.join('content', 'tags', `${tagname}`, '_index.md'), fileString, { flag: 'w' });
         }));
 
     console.timeEnd('All tags converted to Markdown in');
