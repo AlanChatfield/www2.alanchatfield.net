@@ -153,7 +153,6 @@ const createMdFilesFromGhost = async () => {
             const frontmatter = {
                 title: tag.name,
                 description: tag.description,
-                slug: tag.slug,
                 image: tag.feature_image,
 		banner: 'dark',
                 i18nlanguage: 'en', // Change for your language
@@ -161,9 +160,13 @@ const createMdFilesFromGhost = async () => {
                 draft: tag.visibility !== 'public',
             };
 
+            if (tag.slug) {
+                frontmatter.slug = tag.slug.replace('/tag/', '/')
+            }
+		
             if (tag.og_title) {
                 frontmatter.og_title = tag.og_title
-            }
+            }		
 
             if (tag.og_description) {
                 frontmatter.og_description = tag.og_description
