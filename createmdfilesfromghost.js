@@ -193,7 +193,7 @@ const createMdFilesFromGhost = async () => {
             const yamltag = await yaml.dump(frontmatter);
 
             // Super simple concatenating of the frontmatter and our content
-            const fileString = `---\n${yamltag}\n---\n`;
+            const fileString = `---\n${yamltag}\n---`;
             const dir = path.join('content', 'tags', `${tag.slug}`);
 			
             if (!fs.existsSync(dir)) {
