@@ -7,7 +7,7 @@ disableKinds = ["taxonomyTerm"]
 [outputs]
   page = ["HTML", "AMP"]
 [permalinks]
-  post = "/:title/"
+  post = "/:slug/"
   tags = "/:slug/"
 [params]
   mainSections = ["marketing", "technology","martech","opinion"]
