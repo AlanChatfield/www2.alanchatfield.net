@@ -165,9 +165,9 @@ const createMdFilesFromGhost = async () => {
 
             let accentColor = tag.accent_color || '';	
             if (accentColor == "#00578A") {
-                frontmatter.url = "opinion/" + tag.slug;
+                frontmatter.slug = "opinion/" + tag.slug;
             } else {		    
-                frontmatter.url = tag.slug;		    
+                frontmatter.slug = tag.slug;		    
             }		    
 		
             if (tag.og_title) {
