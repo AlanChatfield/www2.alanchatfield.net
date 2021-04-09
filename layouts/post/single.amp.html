@@ -631,7 +631,10 @@ main.container>footer.post-navigation {border: none;padding-top: 2.5em;padding-b
 	.home-template article.info > p {padding: 0em 0.9em 1em;background: #eef4f4;max-width: 680px;margin: 0;color: #333;font-size:14px}
 	.container.noimg>.index:last-child { margin-bottom:1.5em; }	
 }
-	.blog-cover { background-image: url({{.Params.image}}) }
+	.blog-cover { background-image: url({{ replace .Params.image "/content/images/" "/content/images/size/w2000/" }}) }	 
+	@media (max-width: 1023px){ .blog-cover { background-image: url({{ replace .Params.image "/content/images/" "/content/images/size/w1200/" }})} }
+	@media (max-width: 767px){ .blog-cover { background-image: url({{ replace .Params.image "/content/images/" "/content/images/size/w750/" }})} }
+	@media (max-width: 480px){ .blog-cover { background-image: url({{ replace .Params.image "/content/images/" "/content/images/size/w475/" }})} }
 </style>	
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">    
@@ -669,10 +672,19 @@ main.container>footer.post-navigation {border: none;padding-top: 2.5em;padding-b
 	</nav>
 </section>
 
-
-
-
-	{{ partial "jumbotron" . }} 
+	<div class="blog-cover {{.Params.banner}}">
+	    <section>
+		<div class="container">
+		    <h1 class="title">{{.Title}}</h1>
+		    <h3>{{.Params.excerpt}}</h3>
+		    <div class="social">
+			<a class="icon-tw" href='http://twitter.com/share?text={{.Title }}&url={{ .Permalink }}' target="_blank"><i class="fab fa-twitter fa-sm"></i></a>
+			<a class="icon-li" href='https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{.Title }}' target="_blank"><i class="fab fa-linkedin-in fa-sm"></i></a>			
+			<a class="icon-fb" href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" target="_blank"><i class="fab fa-facebook-f fa-sm"></i></a>				
+		    </div>			
+		</div>
+	    </section>			
+	</div>
 	
 	<main class="container">
 		<article>
