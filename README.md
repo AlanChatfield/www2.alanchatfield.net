@@ -1,3 +1,2 @@
 # alanchatfield.net
 
-* Tags Integration
