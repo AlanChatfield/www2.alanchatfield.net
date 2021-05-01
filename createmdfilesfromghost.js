@@ -47,7 +47,7 @@ const createMdFilesFromGhost = async () => {
             // without the root of the URL. Prepend if necessary.
             let ogImage = post.og_image || post.feature_image || '';
             if (!ogImage.includes('https://go.alanchatfield.net')) {
-                ogImage = 'https://go.alanchatfield.net' + ogImage
+                ogImage = 'https://alanchatfield.net' + ogImage
             }
             frontmatter.og_image = ogImage;
 
@@ -109,7 +109,7 @@ const createMdFilesFromGhost = async () => {
             // without the root of the URL. Prepend if necessary.
             let ogImage = page.og_image || page.feature_image || '';
             if (!ogImage.includes('https://alanchatfield.ghost.io')) {
-                ogImage = 'https://alanchatfield.ghost.io' + ogImage
+                ogImage = 'https://alanchatfield.net' + ogImage
             }
             frontmatter.og_image = ogImage;
 
@@ -174,7 +174,7 @@ const createMdFilesFromGhost = async () => {
             // without the root of the URL. Prepend if necessary.
             let ogImage = tag.og_image || tag.feature_image || '';
             if (!ogImage.includes('https://alanchatfield.ghost.io')) {
-                ogImage = 'https://alanchatfield.ghost.io' + ogImage
+                ogImage = 'https://alanchatfield.net' + ogImage
             }
             frontmatter.og_image = ogImage;
 
