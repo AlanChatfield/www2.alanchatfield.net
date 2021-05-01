@@ -34,7 +34,7 @@
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_GB">
 	<meta property="og:title" content="{{ if .IsPage }}{{ if .Params.og_title }}{{ .Params.og_title }}{{ else }}{{ .Site.Title }}: Marketing via Technology{{ end }}{{ else }}{{ if .Params.og_title }}{{ .Params.og_title }} - {{ end }}{{ .Site.Title }}: Marketing via Technology{{ end }}">
-	<meta property="og:image" content="{{ if .IsPage }}{{ if .Params.image }}{{ replace .Params.image "/content/images/" "/content/images/size/w1200/" }}{{ else }}https://go.alanchatfield.net/content/images/size/w1200/2021/01/og-image.png{{ end }}{{ else }}https://go.alanchatfield.net/content/images/size/w1200/2021/01/og-image.png{{ end }}">
+	<meta property="og:image" content="{{ if .IsPage }}{{ if .Params.image }}{{ replace .Params.image "https://go.alanchatfield.net/content/images/" "https://alanchatfield.net/content/images/size/w1200/" }}{{ else }}https://alanchatfield.net/content/images/size/w1200/2021/01/og-image.png{{ end }}{{ else }}https://go.alanchatfield.net/content/images/size/w1200/2021/01/og-image.png{{ end }}">
 	<meta property="og:description" content="{{ if .Params.og_description }}{{ .Params.og_description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
 	<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 	<meta property="og:url" content="{{ .Permalink }}" />	
@@ -54,7 +54,7 @@
 	<meta name="twitter:title" content="{{ if .IsPage }}{{ if .Params.twitter_title }}{{ .Params.twitter_title }}{{ else }}{{ .Site.Title }}{{ end }}{{ else }}{{ if .Params.twitter_title }}{{ .Params.twitter_title }} - {{ end }}{{ .Site.Title }}{{ end }}" />
 	<meta name="twitter:description" content="{{ if .Params.twitter_description }}{{ .Params.twitter_description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}" />
 	<meta name="twitter:url" content="{{ .Permalink }}" />
-	<meta name="twitter:image" content="{{ if .IsPage }}{{ if .Params.image }}{{ replace .Params.image "/content/images/" "/content/images/size/w1200/" }}{{ else }}https://go.alanchatfield.net/content/images/size/w1200/2021/01/og-image.png{{ end }}{{ else }}https://go.alanchatfield.net/content/images/size/w1200/2021/01/og-image.png{{ end }}" />
+	<meta name="twitter:image" content="{{ if .IsPage }}{{ if .Params.image }}{{ replace .Params.image "https://go.alanchatfield.net/content/images/" "https://alanchatfield.net/content/images/size/w1200/" }}{{ else }}https://alanchatfield.net/content/images/size/w1200/2021/01/og-image.png{{ end }}{{ else }}https://go.alanchatfield.net/content/images/size/w1200/2021/01/og-image.png{{ end }}" />
 	<meta name="twitter:site" content="@alan_chatfield" />	
 	
 	
@@ -64,7 +64,7 @@
 	  "@context": "https://schema.org",
 	  "@type": "Article",
 	  "headline": "{{ .Title }}",
-	  "image": {{ replace .Params.image "/content/images/" "/content/images/size/w1200/" }},
+	  "image": {{ replace .Params.image "https://go.alanchatfield.net/content/images/" "https://alanchatfield.net/content/images/size/w1200/" }},
 	  "datePublished": {{ .PublishDate }},
 	  "dateModified": {{ .Lastmod }},
 	  "author": {
@@ -104,7 +104,7 @@
 	  },
 	  "name": "{{ .Title }} - Alan Chatfield",	  
 	  "url": {{ .Permalink }},
-	  "image": "https://go.alanchatfield.net/content/images/size/w1200/2021/01/og-image.png",
+	  "image": "https://alanchatfield.net/content/images/size/w1200/2021/01/og-image.png",
 	  "description": "{{ .Description | plainify | safeHTML }}"
 	}
 	{{ end }}
