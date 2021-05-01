@@ -30,22 +30,18 @@ const createMdFilesFromGhost = async () => {
                 description: post.meta_description || post.excerpt,
                 pagetitle: post.title,
                 slug: post.slug,
-                image: post.feature_image,
+                image: post.feature_image,		    
                 lastmod: post.updated_at,
                 date: post.published_at,
                 excerpt: post.excerpt,
+		og_title: post.og_title || post.meta_title || post.title, 
+		og_description: post.og_description || post.meta_description || post.excerpt,
+		twitter_title: post.twitter_title || post.meta_title || post.title, 
+		twitter_description: post.twitter_description || post.meta_description || post.excerpt,		    
                 i18nlanguage: 'en', // Change for your language
                 weight: post.featured ? 1 : 0,
                 draft: post.visibility !== 'public',
-            };
-
-            if (post.og_title) {
-                frontmatter.og_title = post.og_title
-            }
-
-            if (post.og_description) {
-                frontmatter.og_description = post.og_description
-            }
+            };	
 
             // The format of og_image is /content/images/2020/04/social-image-filename.jog
             // without the root of the URL. Prepend if necessary.
@@ -100,18 +96,14 @@ const createMdFilesFromGhost = async () => {
                 lastmod: page.updated_at,
                 date: page.published_at,
                 excerpt: page.excerpt,
+		og_title: page.og_title || page.meta_title || page.title, 
+		og_description: page.og_description || page.meta_description || page.excerpt,
+		twitter_title: page.twitter_title || page.meta_title || page.title, 
+		twitter_description: page.twitter_description || page.meta_description || page.excerpt,			    
                 i18nlanguage: 'en', // Change for your language
                 weight: page.featured ? 1 : 0,
                 draft: page.visibility !== 'public',
             };
-
-            if (page.og_title) {
-                frontmatter.og_title = page.og_title
-            }
-
-            if (page.og_description) {
-                frontmatter.og_description = page.og_description
-            }
 
             // The format of og_image is /content/images/2020/04/social-image-filename.jog
             // without the root of the URL. Prepend if necessary.
