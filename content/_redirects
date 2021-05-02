@@ -11,5 +11,5 @@
 /tag/sport/		/opinion/sport/	301
 /rss/	/blog/index.xml	301
 /opinion/*  /:splat  301
-/subscribe  https://go.alanchatfield.net/subscribe  200!
+/subscribe  https://go.alanchatfield.net/  301
 /content/images/*  https://go.alanchatfield.net/content/images/:splat  200!
