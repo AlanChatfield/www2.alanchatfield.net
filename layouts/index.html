@@ -2,7 +2,7 @@
 
 {{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "bannerStyle" .Params.banner) }}
 
-{{ range first 1 (index .Site.Taxonomies.tags "digital-transformation" "demand-creation" "marketing-operations" "marketing-technology") }}
+{{ range first 1 (index .Site.Taxonomies.tags "in" site.Params.mainSections)}}
     {{ range (.GetTerms "tags") }}
         <main class="home-template {{ .LinkTitle | urlize }}">
     {{ end }}
@@ -20,7 +20,7 @@
 </p>		
 				</div>
 			</section>
-		{{ range first 1 (index .Site.Taxonomies.tags "digital-transformation" "demand-creation" "marketing-operations" "marketing-technology") }}
+		{{ range first 1 (index .Site.Taxonomies.tags "in" site.Params.mainSections) }}
 			{{ .Render "summary" }}
 		{{ end }}		
 	</article>
