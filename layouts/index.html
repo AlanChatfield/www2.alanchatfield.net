@@ -2,7 +2,7 @@
 
 {{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "bannerStyle" .Params.banner) }}
 
-{{ $pages := where .Paginator.Pages ".Params.tags" "intersect" (slice "marketing-operations" "demand-creation" "marketing-technology" "digital-transformation")}}
+{{ $pages := where .Site.Pages ".Params.tags" "intersect" (slice "marketing-operations" "demand-creation" "marketing-technology" "digital-transformation")}}
 {{ range first 1 $pages }}
     {{ range (.GetTerms "tags") }}
         <main class="home-template {{ .LinkTitle | urlize }}">
