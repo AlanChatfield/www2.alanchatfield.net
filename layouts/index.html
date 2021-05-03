@@ -2,8 +2,9 @@
 
 {{ partial "banner" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "bannerStyle" .Params.banner) }}
 
-{{ $pages := where .Site.Taxonomies.tags "in" (slice "marketing-operations" "demand-creation" "marketing-technology" "digital-transformation")}}
-{{ range first 1 Site.Pages }}
+{{ $p := (slice "Marketing Operations" "Demand Creation" "Marketing Technology" "Digital Transformation") }}
+{{ $pages := where .Site.RegularPages ".Params.tags" "intersect" $p}}	
+{{ range first 1 $pages }}
     {{ range (.GetTerms "tags") }}
         <main class="home-template {{ .LinkTitle | urlize }}">
     {{ end }}
@@ -21,7 +22,7 @@
 </p>		
 				</div>
 			</section>
-		{{ range first 1 Site.Pages }}
+		{{ range first 1 $pages }}
 			{{ .Render "summary" }}
 		{{ end }}		
 	</article>
