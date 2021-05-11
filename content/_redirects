@@ -7,9 +7,11 @@
 /tag/digital-transformation/		/technology/	301
 /tag/marketing-operations/		/marketing-ops/	301
 /tag/marketing-automation/		/martech/	301
-/tag/politics/		/opinion/politics/	301
-/tag/sport/		/opinion/sport/	301
+/tag/politics/		https://www.chatpress.co.uk/tag/politics/	301
+/tag/sport/		https://www.chatpress.co.uk/tag/sport/	301
+/politics/		https://www.chatpress.co.uk/tag/politics/	301
+/sport/		https://www.chatpress.co.uk/tag/sport/	301
 /rss/	/blog/index.xml	301
-/opinion/*  /:splat  301
+/opinion/*  https://www.chatpress.co.uk/:splat  301
 /subscribe  https://go.alanchatfield.net/subscribe/  301
 /content/images/*  https://go.alanchatfield.net/content/images/:splat  200!
