@@ -239,6 +239,7 @@ article.info .pagination {padding: 1em 1%;}
 .site-nav #navigation .tagline button.btn-outline {font-weight: 400;font-size: 15px;padding: 0.4em 0.7em;border:1px solid #fff;color:#fff;margin: 0;}
 .site-nav #navigation .tagline button.btn-outline:hover, .site-nav #navigation .tagline:hover button.btn-outline, .site-nav #navigation .tagline:active button.btn-outline {background-color:#109954;color:#fff;}
 .site-nav #navigation #brand{font-size: 20.4px;color:#fff;font-weight: 600;margin-top: -5px;}
+.site-nav #navigation #brand small{font-style: italic;}
 .site-nav #navigation #brand span{display: inline-block;line-height: 18.75px;height: 40px;}
 .site-nav #navigation #brand a:hover {text-decoration: none;}
 .site-nav #navigation #brand img{height:40px;margin-right: 2px;top:3px;margin-left: 1px;display: inline-block;position: relative;vertical-align: initial;}
