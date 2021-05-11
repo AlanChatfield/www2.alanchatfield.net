@@ -137,7 +137,7 @@ const createMdFilesFromGhost = async () => {
         // Fetch tags from the Ghost Content API
         const tags = await api.tags.browse({
             limit: 'all',
-            filter: 'visibility:public'
+            filter: 'accent_color:-#00578A+visibility:public'
         });
 
         await Promise.all(tags.map(async (tag) => {
