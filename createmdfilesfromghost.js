@@ -109,7 +109,7 @@ const createMdFilesFromGhost = async () => {
             // The format of og_image is /content/images/2020/04/social-image-filename.jog
             // without the root of the URL. Prepend if necessary.
             let ogImage = page.og_image || page.feature_image || '';
-            if (!ogImage.includes('https://www.alanchatfield.ghost.io'')) {
+            if (!ogImage.includes('https://www.alanchatfield.ghost.io')) {
                 ogImage = 'https://www.alanchatfield.net' + ogImage
             }
             frontmatter.og_image = ogImage;
