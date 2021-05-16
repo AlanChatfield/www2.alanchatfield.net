@@ -1,26 +1,25 @@
-{{ $p := (slice "Politics" "Sport" "Asides") }}
-{{ $pages := where .Site.RegularPages ".Params.tags" "intersect" $p}}	
-<footer class="navigation post-navigation" role="navigation">
+
+	<footer class="navigation post-navigation" role="navigation">
 		<div class="nav-links">
-    {{ with $pages.Prev . }}
+    {{ if .PrevInSection }}
 			<div class="nav-previous">
-				<a href="{{ .Permalink }}" rel="prev">
+				<a href="{{ .PrevInSection.URL }}" rel="prev">
 					<div class="the-navigation-arrow"><i class="fa prev-next fa-lg fa-angle-left"></i></div> 
 					<div class="meta-nav"><span class="small-part">Previous Post</span>
-						<div class="next-prev-name">{{ .Title }}</div>
+						<div class="next-prev-name">{{ .PrevInSection.Title }}</div>
 					</div>
 				</a>
 			</div>
     {{ end }}
-    {{ with $pages.Next . }}
+        {{ if .NextInSection }}
 			<div class="nav-next">
-				<a href="{{ .Permalink }}" rel="next">
+				<a href="{{ .NextInSection.URL }}" rel="next">
 					<div class="meta-nav"><span class="small-part">Next Post</span>
-						<div class="next-prev-name">{{ .Title }}</div>
+						<div class="next-prev-name">{{ .NextInSection.Title }}</div>
 					</div>
 					<div class="the-navigation-arrow"><i class="fa prev-next fa-lg fa-angle-right"></i></div>
 				</a>
 			</div>
-    {{ end }}
+        {{ end }}
 		</div>
 	</footer>
