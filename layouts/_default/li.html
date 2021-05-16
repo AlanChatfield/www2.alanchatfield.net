@@ -1,6 +1,6 @@
 <section class="index img">
-	<a href="{{ .Permalink }}" rel="prefetch"><img srcset="{{ replace .Params.image "https://go.alanchatfield.net/content/images/" "https://alanchatfield.net/content/images/size/w340/" }} 340w, {{ replace .Params.image "https://go.alanchatfield.net/content/images/" "https://alanchatfield.net/content/images/size/w475/" }} 475w, {{ replace .Params.image "https://go.alanchatfield.net/content/images/" "https://alanchatfield.net/content/images/size/w750/" }} 750w"
-sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px" src="{{ replace .Params.image "https://go.alanchatfield.net/content/images/" "https://alanchatfield.net/content/images/size/w340/" }}" class="avatar"></img></a>
+	<a href="{{ .Permalink }}" rel="prefetch"><img srcset="{{ replace .Params.image "/content/images/" "/content/images/size/w340/" }} 340w, {{ replace .Params.image "/content/images/" "/content/images/size/w475/" }} 475w, {{ replace .Params.image "/content/images/" "/content/images/size/w750/" }} 750w"
+sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px" src="{{ replace .Params.image "/content/images/" "/content/images/size/w340/" }}" class="avatar"></img></a>
 	<div>
 		<a href="{{ .Permalink }}" rel="prefetch">
 			<h2 class="title">{{ .Title }}</h2>
