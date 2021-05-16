@@ -17,16 +17,11 @@
                     <span class="muted"><span class="xs-show">Martech Solutions Architect and </span><span class="xs-hide"></span>Digital Marketing Consultant at <a href="//www.crmtdigital.com">CRMT Digital</a><span class="xs-hide"> and Marketo Certified Solutions Architect. Advisor on marketing effectiveness and marketing technology optimisation.</span></span></p>
             </footer>
     </article> 
-    {{ $p := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology" "Digital Transformation") }}
-    {{ if or (in .Params.tags "Marketing Operations") (in .Params.tags "Demand Marketing") (in .Params.tags "Marketing Technology") (in .Params.tags "Digital Transformation") }}
-          {{ partial "pager2" . }}
-    {{ else }}
-          {{ partial "pager" . }}
-    {{ end }}
-    <footer class="subscribe-form post-navigation">
+    {{ partial "pager" . }}
+    <!--footer class="subscribe-form post-navigation">
         <h3 class="message-header" style="margin:0 0 20px"><strong>Get the latest articles straight to your inbox</strong></h3>
         <p class="message-header xs-hide">Sign up for biweekly email updates on the latest martech trends</p>
         <a href="https://go.alanchatfield.net/subscribe/" class="button"><span style="">Subscribe</span></a>
-    </footer>
+    </footer-->
 </main>    
 {{ end }}
