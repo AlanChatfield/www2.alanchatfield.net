@@ -342,14 +342,14 @@ main .index > span {background-color: #004225; transition: transform 0.5s;overfl
 article.grid .index > span {display: inline;min-width: 0px;}
 article.grid .index {flex-direction: column;margin: 0 1% 3em;width: 31.33%;display: flex;}
 article.grid .index:nth-of-type(4) {display: none !important;}
-.demand-creation article.grid.demand-creation .index:nth-of-type(1), .marketing-operations article.grid.demand-creation .index:nth-of-type(1) {display: none !important;}
-.demand-creation article.grid.demand-creation .index:nth-of-type(4), .marketing-operations article.grid.demand-creation .index:nth-of-type(4) {display: flex !important;}
-.marketing-technology article.grid.marketing-automation .index:nth-of-type(1), .marketing-automation article.grid.marketing-automation .index:nth-of-type(1) {display: none !important;}
-.marketing-technology article.grid.marketing-automation .index:nth-of-type(4), .marketing-automation article.grid.marketing-automation .index:nth-of-type(4) {display: flex !important;}
-.digital-transformation article.grid.digital-transformation .index:nth-of-type(1), .information-technology article.grid.digital-transformation .index:nth-of-type(1) {display: none !important;}
-.digital-transformation article.grid.digital-transformation .index:nth-of-type(4), .information-technology article.grid.digital-transformation .index:nth-of-type(4) {display: flex !important;}
-.asides article.grid.opinion .index:nth-of-type(1), .asides article.grid.opinion .index:nth-of-type(1) {display: none !important;}
-.asides article.grid.opinion .index:nth-of-type(4), .asides article.grid.opinion .index:nth-of-type(4) {display: flex !important;}
+.marketing-operations article.grid.marketing-operations .index:nth-of-type(1), .marketing-operations article.grid.marketing-operations .index:nth-of-type(1) {display: none !important;}
+.marketing-operations article.grid.marketing-operations .index:nth-of-type(4), .marketing-operations article.grid.demand-marketing-operations .index:nth-of-type(4) {display: flex !important;}
+.demand-creation article.grid.demand-creation .index:nth-of-type(1), .demand-creation article.grid.demand-creation .index:nth-of-type(1) {display: none !important;}
+.demand-creation article.grid.demand-creation .index:nth-of-type(4), .demand-creation article.grid.demand-creation .index:nth-of-type(4) {display: flex !important;}
+.marketing-technology article.grid.marketing-automation .index:nth-of-type(1), .marketing-technology article.grid.marketing-automation .index:nth-of-type(1) {display: none !important;}
+.marketing-technology article.grid.marketing-automation .index:nth-of-type(4), .marketing-technology article.grid.marketing-automationn .index:nth-of-type(4) {display: flex !important;}
+.digital-transformation article.grid.digital-transformation .index:nth-of-type(1), .digital-transformation article.grid.digital-transformation .index:nth-of-type(1) {display: none !important;}
+.digital-transformation article.grid.digital-transformation .index:nth-of-type(4), .digital-transformation article.grid.digital-transformation .index:nth-of-type(4) {display: flex !important;}
 article.grid .index .meta {position: absolute;bottom: 20px;}
 article.info > h2 {margin: 0em 0.6em 0.4em;max-width: 680px;}
 article.info > p {margin: 0em 0.95em 1.5em;max-width: 680px;}
