@@ -618,7 +618,7 @@ main.container>footer.subscribe-form { background: none;box-shadow: none; text-a
 	.blog-cover.index-cover, .blog-cover.author-cover, .blog-cover.index-cover section, .blog-cover.author-cover section { background: none !important;}
 	.blog-cover section .container { margin-top: 0px;}
 	.site-nav #navigation {padding: 15px 0px;height: 60px;}
-	.home-template .blog-cover, .blog-cover.index-cover.home { { display: none; }
+	.home-template .blog-cover, .blog-cover.index-cover.home { display: none; }
 	.home-template article.info .pagination {padding: 1em 0.5em 0;margin-top: 0.2em;margin-bottom: 0em;}
 	.home-template article.info > h2 {padding: 1em 0.6em 0.6em;max-width: 680px;margin: 0;background: #eef4f4;color: #333;}
 	.home-template article.info > p {padding: 0em 0.9em 1em;background: #eef4f4;max-width: 680px;margin: 0;color: #333;font-size:14px}
