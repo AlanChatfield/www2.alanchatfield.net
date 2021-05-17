@@ -11,7 +11,6 @@
 
 	{{ $styles := resources.Get "css/main.css" | fingerprint }}
 	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
-	<link href="/fonts/fonts.css" rel="stylesheet">
 	{{if .Params.canonical }}
 	<link rel="canonical" href="{{ .Params.canonical }}"> 
 	{{ end }}	
