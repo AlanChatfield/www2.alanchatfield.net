@@ -451,8 +451,10 @@ main.container>footer.subscribe-form { background: none;box-shadow: none; text-a
 .post-navigation a:hover,.post-navigation a:focus {color:#000;} 
 .post-navigation .nav-previous .meta-nav {float: right;}
 .post-navigation .nav-previous .the-navigation-arrow {float: left;width: 10%;}
+.post-navigation .nav-previous .the-navigation-arrow svg {height: 1em;margin-top: 4px;text-align: left;left: 0px;width: auto;}
 .post-navigation .nav-next .meta-nav {float: left;}
 .post-navigation .nav-next .the-navigation-arrow {float: right;	width: 10%;}
+.post-navigation .nav-next .the-navigation-arrow svg {height: 1em;margin-top: 4px;text-align: right;left: 0px;width: auto;}
 .post-navigation .meta-nav .next-prev-name {color: #333;line-height: 1.4;}
 .post-navigation .meta-nav span {position: relative;}
 .comment-navigation .nav-previous,.paging-navigation .nav-previous,.post-navigation .nav-previous {float: left;	width: 50%;}
