@@ -8,7 +8,7 @@ const ghostKey = process.env.GHOST_KEY;
 const api = new GhostContentAPI({
 	url: ghostURL,
 	key: ghostKey,
-	version: 'v3'
+	version: 'v5.0'
 });
 
 const createMdFilesFromGhost = async () => {
