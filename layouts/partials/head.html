@@ -10,7 +10,7 @@
 	<meta name="msvalidate.01" content="2D884678AA9CA1B66D492BD36668348F" />
 
 	{{ $styles := resources.Get "css/main.css" | fingerprint }}
-	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 	{{if .Params.canonical }}
 	<link rel="canonical" href="{{ .Params.canonical }}"> 
 	{{ end }}	
