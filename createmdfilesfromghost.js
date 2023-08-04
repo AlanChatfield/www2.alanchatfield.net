@@ -35,6 +35,7 @@ const createMdFilesFromGhost = async () => {
                 lastmod: post.updated_at,
                 date: post.published_at,
                 excerpt: post.excerpt,
+		relcanonical: post.canonical_url,    
 		og_title: post.og_title || post.meta_title || post.title, 
 		og_description: post.og_description || post.meta_description || post.excerpt,
 		twitter_title: post.twitter_title || post.meta_title || post.title, 
