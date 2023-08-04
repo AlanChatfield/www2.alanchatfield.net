@@ -11,8 +11,8 @@
 
 	{{ $styles := resources.Get "css/main.css" | fingerprint }}
 	<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-	{{if .Params.canonical }}
-	<link rel="canonical" href="{{ .Params.canonical }}"> 
+	{{if .Params.relcanonical }}
+	<link rel="canonical" href="{{ .Params.relcanonical }}"> 
 	{{ end }}	
 	
 	<!-- Favicons -->
