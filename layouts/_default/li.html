@@ -9,7 +9,7 @@ sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px" src="{{ $a340 
 		<a href="{{ .Permalink }}" rel="prefetch">
 			<h2 class="title">{{ .Title }}</h2>
 			<p>{{ .Params.excerpt }}</p>
-			<div class="meta">{{ .Date.Format "2 Jan 2006" }} | {{ partial "tags" . }}</div>
+			<div class="meta">{{ partial "tags" . }} | {{ .Date.Format "Jan 2006" }}</div>
 		</a>
 	</div>
 </section>
