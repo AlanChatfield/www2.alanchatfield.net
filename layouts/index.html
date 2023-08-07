@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "banner" (dict "imageUrl" .Params.image "title" "Digital at the Crossroads" "subtitle" .Params.subtitle "bannerStyle" .Params.banner) }}
+{{ partial "banner" (dict "imageUrl" .Params.image "title" "Technology from the Crossroads" "subtitle" .Params.subtitle "bannerStyle" .Params.banner) }}
 
 {{ $p := (slice "Marketing Operations" "Demand Creation" "Marketing Technology" "Digital Transformation") }}
 {{ $pages := where .Site.RegularPages ".Params.tags" "intersect" $p}}	
