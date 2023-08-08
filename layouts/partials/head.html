@@ -1,6 +1,6 @@
 <head>
 
-	{{ if eq .Kind "home" }}<title>Alan Chatfield - Digital Intersections Blog</title>{{ else }}<title>{{ .Title }} - Alan Chatfield</title>{{ send }}
+	{{ if eq .Kind "home" }}<title>Alan Chatfield - Digital Intersections Blog</title>{{ else }}<title>{{ .Title }} - Alan Chatfield</title>{{ end }}
 	<meta name="description" content="{{ if .Params.excerpt }}{{ .Params.excerpt }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}" />
 
 	<meta charset="utf-8">
