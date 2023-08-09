@@ -38,7 +38,7 @@
 		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-operations") }}		
 			{{ .Render "li" }}
 		    {{ end }}
-	</article>
+	</article>	
 
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
@@ -46,13 +46,12 @@
 		</nav>		
 		<h2>{{.Params.section2.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
-	</article>
-	<article class="container grid demand-creation">	
-		    {{ range first 4 (index .Site.Taxonomies.tags "demand-creation") }}
-			{{ .Render "li" }}
-		    {{ end }}
 	</article>		
-
+	<article class="container grid digital-transformation">	
+		{{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}
+			{{ .Render "li" }}
+		{{ end }}
+	</article>
 
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
@@ -60,12 +59,12 @@
 		</nav>		
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
-	</article>		
-	<article class="container grid digital-transformation">	
-		{{ range first 4 (index .Site.Taxonomies.tags "digital-transformation") }}
-			{{ .Render "li" }}
-		{{ end }}
 	</article>
+	<article class="container grid demand-creation">	
+		    {{ range first 4 (index .Site.Taxonomies.tags "demand-creation") }}
+			{{ .Render "li" }}
+		    {{ end }}
+	</article>		
 		
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
@@ -75,11 +74,24 @@
 		<p>{{.Params.section4.text}}</p>
 	</article>	
 	<article class="container grid noimg marketing-automation">	
-		{{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}			
+		{{ range first 4 (index .Site.Taxonomies.tags "digital-transformation") }}			
 			{{ .Render "li" }}
 		{{ end }}
 	</article>		
-
+		
+	<article class="container info">
+		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/{{.Params.section5.link}}">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>{{.Params.section5.heading}}</h2>
+		<p>{{.Params.section5.text}}</p>
+	</article>	
+	<article class="container grid noimg marketing-automation">	
+		{{ range first 4 (index .Site.Taxonomies.tags "marketing-automation") }}			
+			{{ .Render "li" }}
+		{{ end }}
+	</article>	
+		
 	{{partial "subscribe" . }}	
 	</div>    
 </main>
