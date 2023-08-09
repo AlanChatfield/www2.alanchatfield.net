@@ -47,8 +47,8 @@
 		<h2>{{.Params.section2.heading}}</h2>
 		<p>{{.Params.section2.text}}</p>
 	</article>		
-	<article class="container grid digital-transformation">	
-		{{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}
+	<article class="container grid demand-marketing">	
+		{{ range first 4 (index .Site.Taxonomies.tags "demand-marketing") }}
 			{{ .Render "li" }}
 		{{ end }}
 	</article>
@@ -60,8 +60,8 @@
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
 	</article>
-	<article class="container grid demand-creation">	
-		    {{ range first 4 (index .Site.Taxonomies.tags "demand-creation") }}
+	<article class="container grid marketing-technology">	
+		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}
 			{{ .Render "li" }}
 		    {{ end }}
 	</article>		
@@ -73,7 +73,7 @@
 		<h2>{{.Params.section4.heading}}</h2>
 		<p>{{.Params.section4.text}}</p>
 	</article>	
-	<article class="container grid noimg marketing-automation">	
+	<article class="container grid digital-transformation">	
 		{{ range first 4 (index .Site.Taxonomies.tags "digital-transformation") }}			
 			{{ .Render "li" }}
 		{{ end }}
