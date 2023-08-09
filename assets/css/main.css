@@ -420,11 +420,13 @@ article.grid .index > span {display: inline;min-width: 0px;}
 article.grid .index {flex-direction: column;margin: 0 1% 3em;width: 31.33%;display: flex;}
 article.grid .index:nth-of-type(4) {display: none !important;}
 .marketing-operations article.grid.marketing-operations .index:nth-of-type(1), .marketing-operations article.grid.marketing-operations .index:nth-of-type(1) {display: none !important;}
-.marketing-operations article.grid.marketing-operations .index:nth-of-type(4), .marketing-operations article.grid.demand-marketing-operations .index:nth-of-type(4) {display: flex !important;}
-.demand-creation article.grid.demand-creation .index:nth-of-type(1), .demand-creation article.grid.demand-creation .index:nth-of-type(1) {display: none !important;}
-.demand-creation article.grid.demand-creation .index:nth-of-type(4), .demand-creation article.grid.demand-creation .index:nth-of-type(4) {display: flex !important;}
-.marketing-technology article.grid.marketing-automation .index:nth-of-type(1), .marketing-technology article.grid.marketing-automation .index:nth-of-type(1) {display: none !important;}
-.marketing-technology article.grid.marketing-automation .index:nth-of-type(4), .marketing-technology article.grid.marketing-automationn .index:nth-of-type(4) {display: flex !important;}
+.marketing-operations article.grid.marketing-operations .index:nth-of-type(4), .marketing-operations article.grid.marketing-operations .index:nth-of-type(4) {display: flex !important;}
+.demand-marketing article.grid.demand-marketing .index:nth-of-type(1), .demand-marketing article.grid.demand-marketing .index:nth-of-type(1) {display: none !important;}
+.demand-marketing article.grid.demand-marketing .index:nth-of-type(4), .demand-marketing article.grid.demand-marketing .index:nth-of-type(4) {display: flex !important;}
+.marketing-automation article.grid.marketing-automation .index:nth-of-type(1), .marketing-automation article.grid.marketing-automation .index:nth-of-type(1) {display: none !important;}
+.marketing-automation article.grid.marketing-automation .index:nth-of-type(4), .marketing-automation article.grid.marketing-automation .index:nth-of-type(4) {display: flex !important;}
+.marketing-technology article.grid.marketing-technology .index:nth-of-type(1), .marketing-technology article.grid.marketing-technology .index:nth-of-type(1) {display: none !important;}
+.marketing-technology article.grid.marketing-technology .index:nth-of-type(4), .marketing-technology article.grid.marketing-technology .index:nth-of-type(4) {display: flex !important;}
 .digital-transformation article.grid.digital-transformation .index:nth-of-type(1), .digital-transformation article.grid.digital-transformation .index:nth-of-type(1) {display: none !important;}
 .digital-transformation article.grid.digital-transformation .index:nth-of-type(4), .digital-transformation article.grid.digital-transformation .index:nth-of-type(4) {display: flex !important;}
 article.grid .index .meta {position: absolute;bottom: 20px;}
