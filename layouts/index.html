@@ -61,24 +61,25 @@
 		<h2>{{.Params.section3.heading}}</h2>
 		<p>{{.Params.section3.text}}</p>
 	</article>		
-	<article class="container grid marketing-automation">	
-		{{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}			
+	<article class="container grid digital-transformation">	
+		{{ range first 4 (index .Site.Taxonomies.tags "digital-transformation") }}
 			{{ .Render "li" }}
 		{{ end }}
 	</article>
-
+		
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section4.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
 		<h2>{{.Params.section4.heading}}</h2>
 		<p>{{.Params.section4.text}}</p>
-	</article>		
-	<article class="container grid noimg digital-transformation">	
-		{{ range first 4 (index .Site.Taxonomies.tags "digital-transformation") }}
+	</article>	
+	<article class="container grid noimg marketing-automation">	
+		{{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}			
 			{{ .Render "li" }}
 		{{ end }}
-	</article>
+	</article>		
+
 	{{partial "subscribe" . }}	
 	</div>    
 </main>
