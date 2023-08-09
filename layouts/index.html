@@ -2,7 +2,7 @@
 
 {{ partial "banner" (dict "imageUrl" .Params.image "title" "Technology from the Crossroads" "subtitle" .Params.subtitle "bannerStyle" .Params.banner) }}
 
-{{ $p := (slice "Marketing Operations" "Demand Creation" "Marketing Technology" "Digital Transformation") }}
+{{ $p := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology" "Digital Transformation" "Marketing Automation") }}
 {{ $pages := where .Site.RegularPages ".Params.tags" "intersect" $p}}	
 {{ range first 1 $pages }}
     {{ range (.GetTerms "tags") }}
