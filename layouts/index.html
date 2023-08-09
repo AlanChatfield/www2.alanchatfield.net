@@ -29,6 +29,19 @@
 
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
+			<a class="older-posts" href="/{{.Params.section3.link}}">See more <span aria-hidden="true">→</span></a>
+		</nav>		
+		<h2>{{.Params.section3.heading}}</h2>
+		<p>{{.Params.section3.text}}</p>
+	</article>
+	<article class="container grid marketing-technology">	
+		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}
+			{{ .Render "li" }}
+		    {{ end }}
+	</article>			
+
+	<article class="container info">
+		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
 		<h2>{{.Params.section1.heading}}</h2>
@@ -51,20 +64,7 @@
 		{{ range first 4 (index .Site.Taxonomies.tags "demand-marketing") }}
 			{{ .Render "li" }}
 		{{ end }}
-	</article>
-
-	<article class="container info">
-		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="/{{.Params.section3.link}}">See more <span aria-hidden="true">→</span></a>
-		</nav>		
-		<h2>{{.Params.section3.heading}}</h2>
-		<p>{{.Params.section3.text}}</p>
-	</article>
-	<article class="container grid marketing-technology">	
-		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}
-			{{ .Render "li" }}
-		    {{ end }}
-	</article>		
+	</article>	
 		
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
