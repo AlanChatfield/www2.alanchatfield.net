@@ -67,19 +67,26 @@
 	</article>		
 		
 	<article class="container info">
-		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="/{{.Params.section5.link}}">See more <span aria-hidden="true">→</span></a>
-		</nav>		
-		<h2>{{.Params.section5.heading}}</h2>
-		<p>{{.Params.section5.text}}</p>
-	</article>	
-	<article class="container grid noimg marketing-automation">	
-		{{ range first 4 (index .Site.Taxonomies.tags "marketing-automation") }}			
-			{{ .Render "li" }}
-		{{ end }}
-	</article>	
+			<nav class="pagination" role="navigation">	
+				<a class="older-posts" href="/newsletter">See more <span aria-hidden="true">→</span></a>
+			</nav>		
+			<h2>Get the latest martech trends straight to your inbox</h2>
+			<p>Sign up to our newsletter for actionable insights into martech and marketing ops</p>
+		</article>
+	
+	<section class="index img" style="margin: 0 1% 3em;width: auto;background: #fff !important;">
+		<a href="/subscribe/" rel="prefetch"><img srcset="https://www.alanchatfield.net/content/images/size/w340/2023/08/photo-1534685785745-60a2cea0ec34.jpg 340w, https://www.alanchatfield.net/content/images/size/w475/2023/08/photo-1534685785745-60a2cea0ec34.jpg 475w, https://www.alanchatfield.net/content/images/size/w750/2023/08/photo-1534685785745-60a2cea0ec34.jpg 750w" sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 340px" src="https://www.alanchatfield.net/content/images/size/w340/2023/08/photo-1534685785745-60a2cea0ec34.jpg" class="avatar"></a>
+		<div>
+		    <footer class="subscribe-form post-navigation">
+		        <h2 class="message-header" style="margin:0 0 20px"><strong>Sign up for the Marketing via Technology newsletter</strong></h2>
+		        <p class="message-header xs-hide" style="margin:0 0 20px">Get the latest martech strategies straight to your inbox. Discover how effective use of technology can accelerate demand and unlock the value of marketing operations.</p>
+		        <a href="/subscribe/" class="button" target="_blank"><span style="">Subscribe</span></a>
+		    </footer>
+			
+		</div>
+	</section>
 		
-	{{partial "subscribe" . }}	
+
 	</div>    
 </main>
 {{end}}
