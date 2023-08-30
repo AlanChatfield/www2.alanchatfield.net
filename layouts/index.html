@@ -61,22 +61,9 @@
 		<p>{{.Params.section1.text}}</p>
 	</article>		
 	<article class="container grid marketing-operations">	
-		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-operations") }}		
+		    {{ range first 4 (index .Site.Taxonomies.tags (slice "marketing-operations" "demand-marketing")) }}		
 			{{ .Render "li" }}
 		    {{ end }}
-	</article>	
-
-	<article class="container info">
-		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="/{{.Params.section2.link}}">See more <span aria-hidden="true">→</span></a>
-		</nav>		
-		<h2>{{.Params.section2.heading}}</h2>
-		<p>{{.Params.section2.text}}</p>
-	</article>		
-	<article class="container grid demand-marketing">	
-		{{ range first 4 (index .Site.Taxonomies.tags "demand-marketing") }}
-			{{ .Render "li" }}
-		{{ end }}
 	</article>		
 		
 	<article class="container info">
