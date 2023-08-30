@@ -61,7 +61,7 @@
 		<p>{{.Params.section1.text}}</p>
 	</article>		
 	<article class="container grid marketing-operations">	
-		    {{ range first 4 (index .Site.Taxonomies.tags (slice "marketing-operations" "demand-marketing")) }}		
+		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-operations") }}		
 			{{ .Render "li" }}
 		    {{ end }}
 	</article>		
