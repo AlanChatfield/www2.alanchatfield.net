@@ -1,3 +1,3 @@
-    {{ range (.GetTerms "tags") }}
+    {{ range first 1 (.GetTerms "tags") }}
         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
     {{ end }}
