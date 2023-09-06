@@ -602,6 +602,7 @@ article .meta{color:#9eabb3;font-size:13px;text-transform:uppercase;margin-botto
 article .meta time,article .meta address{display:inline;font-size:13px}
 article .index .meta,article .index .meta{display:inline;font-size:13px;text-transform:uppercase;margin-bottom:0em;font-weight:400;}
 article .meta a{border:0;color:#9eabb3}
+article .meta.credit { margin-bottom: 1.5em; }
 article img{max-width:100%;margin:1em 0}
 article .title{margin:0.2em 0 0.4em;font-weight:bold;font-size: 1.6em;line-height: 1.125em;letter-spacing: 0.25px;}
 article .title a{border:0;color:rgb(35, 40, 45);}
