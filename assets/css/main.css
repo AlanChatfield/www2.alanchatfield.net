@@ -388,6 +388,7 @@ main .meta{color:#9eabb3;font-size:13px;text-transform:uppercase;margin-bottom:0
 main .meta time,main .meta address{display:inline;font-size:13px}
 main .index .meta,main .index .meta{display:inline;font-size:13px;text-transform:uppercase;margin-bottom:0em;font-weight:400;}
 main .meta a{border:0;color:#9eabb3}
+main .meta.credit { margin-bottom: 1.5em; } 
 main img{max-width:100%;margin:1em 0}
 main .title{margin:0.2em 0 0.4em;font-weight:bold;font-size: 1.6em;line-height: 1.125em;letter-spacing: 0.25px;}
 main .title a{border:0;color:rgb(35, 40, 45);}
