@@ -4,7 +4,7 @@
 {{ $a750 := replace ( replace $a "&w=2000" "&w=750" ) "/content/images/" "/content/images/size/w750/" }}
 <section class="index img">
 	<a href="{{ .Permalink }}" rel="prefetch"><img srcset="{{ $a340 }} 340w, {{ $a475 }} 475w, {{ $a750 }} 750w"
-sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw" src="{{ $a750 }}" class="avatar"></img></a>
+sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw" src="{{ $a750 }}" class="avatar" alt=""></img></a>
 	<div>
 		<a href="{{ .Permalink }}" rel="prefetch">
 			<h2 class="title">{{ .Title }}</h2>
