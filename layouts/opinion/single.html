@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" . }} 
+<main class="post-template container">
+    <article>
+            <header>
+                <h2 class="title xs-show">{{.Title}}</h2>		
+                <div class="meta">{{ .Date.Format "January 2006" }} | {{ partial "tags" . }}</div>			
+            </header>
+
+          {{ .Content }}
+          
+            <footer>
+                <p class="author meta">Written by Alan Chatfield {{ partial "imagecredit" . }}</p>
+            </footer>
+    </article> 
+    {{ partial "pager" . }}
+</main>    
+{{ end }}
