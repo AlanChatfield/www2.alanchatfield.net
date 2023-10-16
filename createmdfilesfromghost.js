@@ -134,7 +134,7 @@ const createMdFilesFromGhost = async () => {
             const fileString = `---\n${yamlPost}\n---\n${content}\n`;
 
             // Save the final string of our file as a Markdown file
-            await fs.writeFile(path.join('content/post', `${post.slug}.md`), fileString, { flag: 'w' });
+            await fs.writeFile(path.join('content/opinion', `${post.slug}.md`), fileString, { flag: 'w' });
         }));
 
     console.timeEnd('All posts converted to Markdown in');
