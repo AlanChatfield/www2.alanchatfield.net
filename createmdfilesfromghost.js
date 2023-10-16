@@ -21,6 +21,7 @@ const createMdFilesFromGhost = async () => {
             filter: 'tag:-[politics,sport,hash-chatpress,hash-member]',		
             include: 'tags,authors',
             formats: ['html'],
+            order: 'published_at DESC'
         });
 
         await Promise.all(posts.map(async (post) => {
@@ -55,7 +56,7 @@ const createMdFilesFromGhost = async () => {
             frontmatter.og_image = ogImage;
 
             if (post.tags && post.tags.length) {
-                frontmatter.tags = post.tags.map(t => t.name);
+                frontmatter.tags = post.tags.filter(t => t.name != '#public').map(t => t.name);
             }
 
             // If there's a canonical url, please add it.
@@ -86,6 +87,7 @@ const createMdFilesFromGhost = async () => {
             filter: 'tag:[politics,sport,hash-chatpress]',		
             include: 'tags,authors',
             formats: ['html'],
+            order: 'published_at DESC'
         });
 
         await Promise.all(posts.map(async (post) => {
@@ -120,7 +122,7 @@ const createMdFilesFromGhost = async () => {
             frontmatter.og_image = ogImage;
 
             if (post.tags && post.tags.length) {
-                frontmatter.tags = post.tags.map(t => t.name);
+                frontmatter.tags = post.tags.filter(t => t.name != '#chatpress').map(t => t.name);
             }
 
             // If there's a canonical url, please add it.
