@@ -12,7 +12,7 @@ const api = new GhostContentAPI({
 });
 
 const createMdFilesFromGhost = async () => {
-    console.time('All posts converted to Markdown in');
+    console.time('All tech posts converted to Markdown in');
 
     try {
         // Fetch  posts from the Ghost Content API
@@ -73,11 +73,12 @@ const createMdFilesFromGhost = async () => {
             await fs.writeFile(path.join('content/post', `${post.slug}.md`), fileString, { flag: 'w' });
         }));
 
-    console.timeEnd('All posts converted to Markdown in');
+    console.timeEnd('All tech posts converted to Markdown in');
     } catch (error) {
         console.error(error);
     }
 
+    console.time('All opinion posts converted to Markdown in');
     try {
         // Fetch  posts from the Ghost Content API
         const posts = await api.posts.browse({
@@ -137,7 +138,7 @@ const createMdFilesFromGhost = async () => {
             await fs.writeFile(path.join('content/opinion', `${post.slug}.md`), fileString, { flag: 'w' });
         }));
 
-    console.timeEnd('All posts converted to Markdown in');
+    console.timeEnd('All opinion posts converted to Markdown in');
     } catch (error) {
         console.error(error);
     }
