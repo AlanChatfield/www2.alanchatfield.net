@@ -56,7 +56,7 @@ const createMdFilesFromGhost = async () => {
             frontmatter.og_image = ogImage;
 
             if (post.tags && post.tags.length) {
-                frontmatter.tags = post.tags.filter(t => t.name != '#public').map(t => t.name);
+                frontmatter.tags = post.tags.filter(t => t.name != '#public').filter(t => t.name != '#crmtdigital').map(t => t.name);
             }
 
             // If there's a canonical url, please add it.
