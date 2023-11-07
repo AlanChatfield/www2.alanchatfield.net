@@ -252,7 +252,7 @@ a:hover{color:#00578A;text-decoration:none}
 .index>div p {margin-bottom: 0.96em;line-height:1.6}
 .index .avatar{border-radius: 0px;height: 195px;width: 325px;max-width: 325px;min-width: 325px;margin: 0;object-fit: cover;float: left;}
 .home-template .blog-cover .btn.btn-outline { color: #fff; border: 1.5px solid #fff;  margin-top: 1.5em; font-weight: 400; }
-.blog-cover{height:50vh;min-height:425px;background-color:#111;background-size:cover;background-position:center center;z-index:1}
+.blog-cover{height:50vh;min-height:325px;background-color:#111;background-size:cover;background-position:center center;z-index:1}
 .bottom-align {background-position:bottom center;}
 .custom-bottom-align {object-position:bottom;}
 .top-align {background-position:top center;}
@@ -260,7 +260,7 @@ a:hover{color:#00578A;text-decoration:none}
 .blog-cover.index-cover { height:325px;min-height:325px; } 
 .blog-cover section{text-align:center;background-color:rgba(0,0,0,0.4);background:radial-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.25));height:100%;display:flex;align-items:center;}
 .blog-cover.author-cover { min-height:500px; }
-.blog-cover section .container {margin-top: 75px;}
+.blog-cover section .container {margin-top: 25px;}
 .blog-cover.index-cover section .container {margin-top: 25px;}
 .blog-cover.index-cover.home { background-position:bottom 20% center; }
 .blog-cover section a:last-child{margin:1.5em 0 0 0}
