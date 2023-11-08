@@ -410,7 +410,7 @@ main .full.zoomable img.zoom{-webkit-transform:scale(1.2);transition:0.4s all ea
 .xs-show {display: none;}
 article.grid .title { font-size: 1.4em; }
 article.grid .index > div {max-height: 270px;height: 270px;position: relative;}
-article.grid p {font-size: 15px;}
+article.grid p {font-size: 16px;}
 article.grid .index .avatar {height: 195px;float: none;display: inline-flex;width: 100%;max-width: none;min-width: 0px;}
 main .index > span {background-color: #004225; transition: transform 0.5s;overflow: hidden;min-width: 325px;display: block;}
 @media (hover) {
