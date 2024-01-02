@@ -84,7 +84,7 @@ const createMdFilesFromGhost = async () => {
         // Fetch  posts from the Ghost Content API
         const posts = await api.posts.browse({
             limit: 'all',
-            filter: 'tag:[politics,sport,hash-chatpress]',		
+            filter: 'tag:[hash-chatpress]',		
             include: 'tags,authors',
             formats: ['html'],
             order: 'published_at DESC'
