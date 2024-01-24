@@ -8,4 +8,4 @@
 /privacy-policy/  /privacy/  301
 /newsletter/  https://marketingviatechnology.com/  301
 /subscribe/  https://marketingviatechnology.com/subscribe/  301
-/content/images/*  https://alanchatfield.ghost.io/content/images/:splat  200!
+/content/images/*  https://marketingviatechnology.com/content/images/:splat  200!
