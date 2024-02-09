@@ -285,7 +285,7 @@ article.info .pagination {padding: 1em 1%;}
 .site-footer p{color:#999}
 .site-footer p a{margin:0;color:#999}
 .site-footer nav{display:inline-block}
-.site-footer nav a+a:before{content:'· ';margin-right:0.5em;color:transparent}
+.site-footer nav a+a:before{content:'· ';margin-right:0.3em;color:transparent}
 .site-footer nav.links a+a:before{content:'| ';margin-right:0.5em;color:transparent}
 .site-footer .social{float:right;padding: 0 0.9em;text-align:center;}
 .site-footer .links{float:right;padding: 0 0.9em;text-align: right;}
