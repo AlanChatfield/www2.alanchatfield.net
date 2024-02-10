@@ -9,7 +9,3 @@
 /newsletter/  https://marketingviatechnology.com/  301
 /subscribe/  https://marketingviatechnology.com/subscribe/  301
 /content/images/*  https://marketingviatechnology.com/content/images/:splat  200
-http://www.alanchatfield.net/opinion/* https://www.alanchatfield.co.uk/opinion/:splat 301!
-https://www.alanchatfield.net/opinion/* https://www.alanchatfield.co.uk/opinion/:splat 301!
-http://alanchatfield.net/opinion/* https://www.alanchatfield.co.uk/opinion/:splat 301!
-https://alanchatfield.net/opinion/* https://www.alanchatfield.co.uk/opinion/:splat 301!
