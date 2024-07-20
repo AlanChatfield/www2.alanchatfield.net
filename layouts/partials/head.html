@@ -51,9 +51,12 @@
 	<meta name="twitter:description" content="{{ if .Params.twitter_description }}{{ .Params.twitter_description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}" />
 	<meta name="twitter:url" content="{{ .Permalink }}" />
 	<meta name="twitter:image" content="{{ if .IsPage }}{{ if .Params.image }}{{ replace .Params.image "https://alanchatfield.ghost.io/content/images/" "https://marketingviatechnology.com/content/images/size/w1200/" }}{{ else }}https://marketingviatechnology.com/content/images/size/w1200/2021/01/og-image.png{{ end }}{{ else }}https://marketingviatechnology.com/content/images/size/w1200/2021/01/og-image.png{{ end }}" />
-	<meta name="twitter:site" content="@alan_chatfield" />	
+	<meta name="twitter:site" content="@alan_chatfield" />
 	
+	{{if eq .Section "post"}}
 	<meta name="fediverse:creator" content="@alancf22@mastodon.social" />
+	<meta name="author" content="Alan Chatfield" />
+	{{ end }}
 	
 	<script type="application/ld+json">
 	{{ if .IsPage }}
