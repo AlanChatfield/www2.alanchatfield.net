@@ -3,7 +3,9 @@
 {{ partial "banner" (dict "imageUrl" .Params.image "title" "Technology from the Crossroads" "subtitle" .Params.subtitle "bannerStyle" .Params.banner) }}
 
 {{ $p := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology" "Digital Transformation" "Marketing Automation") }}
-{{ $pages := where .Site.RegularPages ".Params.tags" "intersect" $p}}	
+{{ $pages := where .Site.RegularPages ".Params.tags" "intersect" $p}}
+{{ $mp := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology" "Marketing Automation") }}
+{{ $mpages := where .Site.RegularPages ".Params.tags" "intersect" $mp}}
 {{ range first 1 $pages }}
     {{ range (.GetTerms "tags") }}
         <main class="home-template {{ .LinkTitle | urlize }}">
@@ -48,12 +50,12 @@
 		<p>{{.Params.section1.text}}</p>
 	</article>		
 	<article class="container grid marketing-operations">	
-		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-operations") }}		
+		    {{ range first 1 $mpages }}		
 			{{ .Render "li" }}
 		    {{ end }}
 	</article>	
 
-	<article class="container info">
+	<!--article class="container info">
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section3.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
@@ -64,7 +66,7 @@
 		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}
 			{{ .Render "li" }}
 		    {{ end }}
-	</article>	
+	</article-->	
 		
 	<article class="container info">
 			<nav class="pagination" role="navigation">	
