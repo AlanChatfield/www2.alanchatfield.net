@@ -8,9 +8,4 @@
 /privacy-policy/  /privacy/  301
 /newsletter/  https://marketingviatechnology.com/  301
 /subscribe/  https://marketingviatechnology.com/subscribe/  301
-/content/images/*  https://marketingviatechnology.com/content/images/:splat  200
-http://www.alanchatfield.co.uk/* https://www.alanchatfield.net/:splat 301!
-https://www.alanchatfield.co.uk/* https://www.alanchatfield.net/:splat 301!
-http://alanchatfield.co.uk/* https://www.alanchatfield.net/:splat 301!
-https://alanchatfield.co.uk/* https://www.alanchatfield.net/:splat 301!
 
