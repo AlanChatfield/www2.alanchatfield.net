@@ -5,4 +5,6 @@ image: "https://marketingviatechnology.com/content/images/2020/12/mountain-road-
 banner: home
 type: "posts"
 url: /blog
+sitemap:
+  disable: true
 ---
