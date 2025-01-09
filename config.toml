@@ -3,7 +3,7 @@ languageCode = "en-gb"
 title = "Alan Chatfield"
 description = "Views from the intersection of digital marketing and enterprise technology"
 preserveTaxonomyNames = true
-disableKinds = ["taxonomyTerm"]
+disableKinds = ["taxonomy"]
 [outputs]
   page = ["HTML", "AMP"]
 [permalinks]
