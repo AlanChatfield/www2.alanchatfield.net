@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" . }} 
+<main class="post-template container">
+    <article>
+            <header>
+                <h2 class="title xs-show">{{.Title}}</h2>             
+                <div class="meta">{{ .Date.Format "January 2006" }} | {{ partial "tags" . }}</div>		
+                <h3>{{.Params.excerpt}}</h3>   
+            </header>
+
+          {{ .Content }}
+        
+            {{ partial "imagecredit" . }}     
+        
+            <footer>
+                <p class="author">
+                    <a rel="author" href="/about" title="Alan Chatfield"><img src="//www.gravatar.com/avatar/60fa755d6b89ee9f9d59d0f957711f40?s&#x3D;64&amp;d&#x3D;mm&amp;r&#x3D;x"></a>
+                    Written by <strong><a rel="author" href="/about" title="Alan Chatfield">Alan Chatfield</a></strong><br>
+                    <span class="muted">Marketing Operations Consultant <span class="xs-show">and Solutions Architect</span> at <a href="//www.crmtdigital.com">CRMT Digital</a><span class="xs-hide"> specialising in marketing technology architecture. Advisor on marketing effectiveness and martech optimisation.</span></span></p>
+            </footer>
+    </article>
+    {{ partial "subscribe" . }}  
+    {{ partial "pager" . }}
+</main>    
+{{ end }}
