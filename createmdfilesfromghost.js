@@ -131,7 +131,7 @@ const createMdFilesFromGhost = async () => {
 
             // If there's a canonical url, please add it.
             if (post.canonical_url) {
-                frontmatter.canonical = post.canonical_url;
+                frontmatter.canonical = 'https://marketingviatechnology.com' + post.slug;
             }
 
             // Create frontmatter properties from all keys in our post object
