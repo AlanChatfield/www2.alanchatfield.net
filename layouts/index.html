@@ -27,7 +27,7 @@
 </p>		
 				</div>
 			</section>
-		{{ range first 1 $pages }}
+		{{ range first 1 (where .Site.Pages "Section" "posts") }}
 			{{ .Render "summary" }}
 		{{ end }}		
 	</article>		
