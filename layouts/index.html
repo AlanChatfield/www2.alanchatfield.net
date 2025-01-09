@@ -4,14 +4,15 @@
 
 {{ $p := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology" "Digital Transformation" "Marketing Automation") }}
 {{ $pages := where .Site.RegularPages ".Params.tags" "intersect" $p}}
-{{ $tp := (slice "Digital Transformation" "Marketing Automation") }}
+{{ $tp := (slice "Digital Transformation") }}
 {{ $tpages := where .Site.RegularPages ".Params.tags" "intersect" $tp}}
-{{ $mp := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology") }}
+{{ $mp := (slice  "Marketing Automation" "Marketing Technology") }}
 {{ $mpages := where .Site.RegularPages ".Params.tags" "intersect" $mp}}
+{{ $op := (slice "Marketing Operations" "Demand Marketing") }}
+{{ $opages := where .Site.RegularPages ".Params.tags" "intersect" $op}}
 {{ range first 1 $pages }}
     {{ range (.GetTerms "tags") }}
-        <!-- main class="home-template {{ .LinkTitle | urlize }}"-->
-        <main class="home-template digital-transformation">
+        <main class="home-template {{ .LinkTitle | urlize }}">
     {{ end }}
 {{ end }}		
 	<article class="container grid long">			
@@ -27,38 +28,38 @@
 </p>		
 				</div>
 			</section>
-		{{ range first 1 (where .Site.RegularPages "Section" "post") }}
+		{{ range first 1 $pages }}
 			{{ .Render "summary" }}
 		{{ end }}		
 	</article>		
 
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="/blog/">See more <span aria-hidden="true">→</span></a>
+			<a class="older-posts" href="/{{.Params.section4.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
 		<h2>{{.Params.section4.heading}}</h2>
 		<p>{{.Params.section4.text}}</p>
 	</article>	
 	<article class="container grid digital-transformation">	
-		{{ range first 4 (where .Site.RegularPages "Section" "post") }}			
+		{{ range first 4 $tpages }}			
 			{{ .Render "li" }}
 		{{ end }}
 	</article>	
 		
 	<article class="container info">
 		<nav class="pagination" role="navigation">	
-			<a class="older-posts" href="/news/">See more <span aria-hidden="true">→</span></a>
+			<a class="older-posts" href="/{{.Params.section1.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
 		<h2>{{.Params.section1.heading}}</h2>
 		<p>{{.Params.section1.text}}</p>
 	</article>		
 	<article class="container grid marketing-operations">	
-		    {{ range first 3 (where .Site.RegularPages "Section" "news") }}		
+		    {{ range first 4 $opages }}		
 			{{ .Render "li" }}
 		    {{ end }}
 	</article>	
 
-	<!--article class="container info">
+	<article class="container info">
 		<nav class="pagination" role="navigation">	
 			<a class="older-posts" href="/{{.Params.section3.link}}">See more <span aria-hidden="true">→</span></a>
 		</nav>		
@@ -66,10 +67,10 @@
 		<p>{{.Params.section3.text}}</p>
 	</article>
 	<article class="container grid marketing-technology">	
-		    {{ range first 4 (index .Site.Taxonomies.tags "marketing-technology") }}
+		    {{ range first 4 $mpages }}
 			{{ .Render "li" }}
 		    {{ end }}
-	</article-->	
+	</article>	
 		
 	<article class="container info">
 			<nav class="pagination" role="navigation">	
