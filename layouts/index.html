@@ -27,7 +27,7 @@
 </p>		
 				</div>
 			</section>
-		{{ range first 1 (where .Site.Pages "Section" "post") }}
+		{{ range first 1 (where .Site.RegularPages "Section" "post") }}
 			{{ .Render "summary" }}
 		{{ end }}		
 	</article>		
@@ -40,7 +40,7 @@
 		<p>{{.Params.section4.text}}</p>
 	</article>	
 	<article class="container grid digital-transformation">	
-		{{ range first 4 (where .Site.Pages "Section" "post") }}			
+		{{ range first 4 (where .Site.RegularPages "Section" "post") }}			
 			{{ .Render "li" }}
 		{{ end }}
 	</article>	
@@ -53,7 +53,7 @@
 		<p>{{.Params.section1.text}}</p>
 	</article>		
 	<article class="container grid marketing-operations">	
-		    {{ range first 3 (where .Site.Pages "Section" "news") }}		
+		    {{ range first 3 (where .Site.RegularPages "Section" "news") }}		
 			{{ .Render "li" }}
 		    {{ end }}
 	</article>	
