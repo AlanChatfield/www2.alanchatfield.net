@@ -103,8 +103,7 @@ const createMdFilesFromGhost = async () => {
 		image_credit: post.feature_image_caption,    
                 lastmod: post.updated_at,
                 date: post.published_at,
-                excerpt: post.excerpt,
-		relcanonical: post.canonical_url,    
+                excerpt: post.excerpt,  
 		og_title: post.og_title || post.meta_title || post.title, 
 		og_description: post.og_description || post.meta_description || post.excerpt,
 		twitter_title: post.twitter_title || post.meta_title || post.title, 
@@ -130,7 +129,9 @@ const createMdFilesFromGhost = async () => {
             }
 
             // If there's a canonical url, please add it.
-            frontmatter.canonical = 'https://marketingviatechnology.com' + post.slug;
+            if (post.canonical_url) {
+                frontmatter.canonical = post.canonical_url;
+            }
 
             // Create frontmatter properties from all keys in our post object
             const yamlPost = await yaml.dump(frontmatter);
