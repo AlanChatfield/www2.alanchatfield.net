@@ -110,7 +110,7 @@ const createMdFilesFromGhost = async () => {
 		twitter_description: post.twitter_description || post.meta_description || post.excerpt,		    
                 i18nlanguage: 'en', // Change for your language
                 weight: post.featured ? 1 : 0,
-                draft: post.visibility !== 'public' && post.visibility !== 'members',
+                draft: post.visibility !== 'members',
 		sitemap: {
 			disable: true
 		}
