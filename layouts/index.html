@@ -40,7 +40,7 @@
 		<p>{{.Params.section4.text}}</p>
 	</article>	
 	<article class="container grid digital-transformation">	
-		{{ range first 4 $tpages }}			
+		{{ range first 4 (where .Site.Pages "Section" "post") }}			
 			{{ .Render "li" }}
 		{{ end }}
 	</article>	
@@ -53,7 +53,7 @@
 		<p>{{.Params.section1.text}}</p>
 	</article>		
 	<article class="container grid marketing-operations">	
-		    {{ range first 4 $mpages }}		
+		    {{ range first 3 (where .Site.Pages "Section" "news") }}		
 			{{ .Render "li" }}
 		    {{ end }}
 	</article>	
