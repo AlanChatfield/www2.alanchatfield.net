@@ -297,6 +297,7 @@ const createMdFilesFromGhost = async () => {
             let accentColor = tag.accent_color || '';	
             if (accentColor == "#00578A") {
                 frontmatter.slug = "opinion/" + tag.slug;
+		frontmatter.sitemap.disable = true;  
             } else {		    
                 frontmatter.slug = tag.slug;		    
             }		    
