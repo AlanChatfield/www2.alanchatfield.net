@@ -13,7 +13,10 @@
 	<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 	{{if .Params.relcanonical }}
 	<link rel="canonical" href="{{ .Params.relcanonical }}"> 
-	{{ end }}	
+	{{ end }}
+	{{if .Params.sitemap.disable }}
+	<meta name="robots" content="noindex">
+	{{ end }}
 	
 	<!-- Favicons -->
     	<link rel="alternate" type="application/rss+xml" title="Alan Chatfield" href="/blog/index.xml" />
@@ -53,7 +56,12 @@
 	<meta name="twitter:image" content="{{ if .IsPage }}{{ if .Params.image }}{{ replace .Params.image "https://alanchatfield.ghost.io/content/images/" "https://marketingviatechnology.com/content/images/size/w1200/" }}{{ else }}https://marketingviatechnology.com/content/images/size/w1200/2021/01/og-image.png{{ end }}{{ else }}https://marketingviatechnology.com/content/images/size/w1200/2021/01/og-image.png{{ end }}" />
 	<meta name="twitter:site" content="@alan_chatfield" />
 	
-	{{if eq .Section "post"}}
+	{{if eq .Section "post" }}
+	<meta name="fediverse:creator" content="@alancf22@mastodon.social" />
+	<meta name="author" content="Alan Chatfield" />
+	{{ end }}
+
+	{{if eq .Section "news"}}
 	<meta name="fediverse:creator" content="@alancf22@mastodon.social" />
 	<meta name="author" content="Alan Chatfield" />
 	{{ end }}
