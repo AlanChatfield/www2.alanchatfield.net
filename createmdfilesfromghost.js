@@ -84,7 +84,7 @@ const createMdFilesFromGhost = async () => {
     try {
         // Fetch  posts from the Ghost Content API
         const posts = await api.posts.browse({
-            limit: '4',
+            limit: 'all',
             filter: 'tag:[hash-member]',		
             include: 'tags,authors',
             formats: ['html'],
