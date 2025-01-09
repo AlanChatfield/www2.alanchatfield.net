@@ -4,7 +4,9 @@
 
 {{ $p := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology" "Digital Transformation" "Marketing Automation") }}
 {{ $pages := where .Site.RegularPages ".Params.tags" "intersect" $p}}
-{{ $mp := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology" "Marketing Automation") }}
+{{ $tp := (slice "Digital Transformation" "Marketing Automation") }}
+{{ $tpages := where .Site.RegularPages ".Params.tags" "intersect" $tp}}
+{{ $mp := (slice "Marketing Operations" "Demand Marketing" "Marketing Technology") }}
 {{ $mpages := where .Site.RegularPages ".Params.tags" "intersect" $mp}}
 {{ range first 1 $pages }}
     {{ range (.GetTerms "tags") }}
@@ -38,7 +40,7 @@
 		<p>{{.Params.section4.text}}</p>
 	</article>	
 	<article class="container grid digital-transformation">	
-		{{ range first 4 (index .Site.Taxonomies.tags "digital-transformation") }}			
+		{{ range first 4 $tpages }}			
 			{{ .Render "li" }}
 		{{ end }}
 	</article>	
