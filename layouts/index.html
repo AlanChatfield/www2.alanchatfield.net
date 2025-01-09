@@ -8,7 +8,8 @@
 {{ $mpages := where .Site.RegularPages ".Params.tags" "intersect" $mp}}
 {{ range first 1 $pages }}
     {{ range (.GetTerms "tags") }}
-        <main class="home-template {{ .LinkTitle | urlize }}">
+        <!-- main class="home-template {{ .LinkTitle | urlize }}"-->
+        <main class="home-template digital-transformation">
     {{ end }}
 {{ end }}		
 	<article class="container grid long">			
