@@ -112,6 +112,8 @@ const createMdFilesFromGhost = async () => {
                 i18nlanguage: 'en', // Change for your language
                 weight: post.featured ? 1 : 0,
                 draft: post.visibility !== 'public' && post.visibility !== 'members',
+		sitemap:,
+		disable: true,    
             };	
 
             // The format of og_image is /content/images/2020/04/social-image-filename.jog
