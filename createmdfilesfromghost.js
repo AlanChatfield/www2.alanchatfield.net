@@ -292,6 +292,9 @@ const createMdFilesFromGhost = async () => {
 		banner: 'dark',
                 i18nlanguage: 'en', // Change for your language
                 draft: tag.visibility !== 'public',
+		sitemap: {
+		    disable: false
+		}
             };
 
             let accentColor = tag.accent_color || '';	
