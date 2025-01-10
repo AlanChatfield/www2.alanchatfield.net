@@ -487,6 +487,14 @@ main.home-template>footer.subscribe-form { background: none;box-shadow: none; te
 .kg-bookmark-card {width:100%;}
 .kg-bookmark-publisher {overflow: hidden;max-width: 240px;line-height: 1.5em;text-overflow: ellipsis;white-space: nowrap;}
 
+main .kg-signup-card-text.kg-align-center { align-items: center; text-align: center }
+main .kg-signup-card-text { padding: 30px;border-radius: 3px;text-align:center; }
+main .kg-signup-card-text .kg-signup-card-disclaimer { font-size: 0.9em; }   
+main .kg-signup-card h2.kg-signup-card-heading {font-size:1.4em; margin: 0 0 20px; font-weight:700; line-height: 1.5;}
+main .kg-signup-card h2 + .kg-signup-card-subheading {font-size: 16px; line-height: 1.75; font-weight: 400; margin: 0 0 1.5em;}
+main .kg-signup-card-subheading + .kg-signup-card-form { margin: 0px; }
+main .kg-signup-card-fields { max-width: 540px; }
+main .kg-signup-card-disclaimer { margin: 1rem 0 0 }
 
 @media (max-width: 1080px){
 	.container {max-width: 990px}
