@@ -32,7 +32,7 @@
 
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_GB">
-	<meta property="og:title" content="{{ if .IsPage }}{{ if .Params.og_title }}{{ .Params.og_title }}{{ else }}{{ .Site.Title }}: Digital Intersections{{ end }}{{ else }}{{ if .Params.og_title }}{{ .Params.og_title }} - {{ end }}{{ .Site.Title }}: Digital Intersections{{ end }}">
+	<meta property="og:title" content="{{ if .IsPage }}{{ if .Params.og_title }}{{ .Params.og_title }}{{ else }}{{ .Site.Title }}- Marketing Operations and Enterprise Technology{{ end }}{{ else }}{{ if .Params.og_title }}{{ .Params.og_title }} - {{ end }}{{ .Site.Title }} - Marketing Operations and Enterprise Technology{{ end }}">
 	<meta property="og:image" content="{{ if .IsPage }}{{ if .Params.image }}{{ replace .Params.image "https://alanchatfield.ghost.io/content/images/" "https://marketingviatechnology.com/content/images/size/w1200/" }}{{ else }}https://marketingviatechnology.com/content/images/size/w1200/2021/01/og-image.png{{ end }}{{ else }}https://marketingviatechnology.com/content/images/size/w1200/2021/01/og-image.png{{ end }}">
 	<meta property="og:description" content="{{ if .Params.og_description }}{{ .Params.og_description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
 	<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
