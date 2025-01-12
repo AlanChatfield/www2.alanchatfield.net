@@ -496,6 +496,16 @@ main .kg-signup-card-subheading + .kg-signup-card-form { margin: 0px; }
 main .kg-signup-card-fields { max-width: 540px; }
 main .kg-signup-card-disclaimer { margin: 1rem 0 0 }
 
+main .kg-header-card { padding: 12vmin 4em; min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center }
+main .kg-header-card.kg-style-image { margin: 3em -3.5em; } 
+main article .kg-header-card.kg-size-small { min-height: 35vh; } 
+main .kg-header-card.kg-style-image { position: relative; background-color: #e7e7e7; background-size: cover; background-position: center }
+main .kg-header-card:not(.kg-style-light) h2.kg-header-card-header,.kg-header-card:not(.kg-style-light) h3.kg-header-card-subheader { color: #fff }
+main .kg-header-card.kg-style-image::before { position: absolute; display: block; content: ""; top: 0; right: 0; bottom: 0; left: 0; background: linear-gradient(0deg,transparent,rgba(0,0,0,.2)) }
+main .kg-header-card h2.kg-header-card-header { font-size: 5em; font-weight: 700; line-height: 1.1em; letter-spacing: -.01em; margin: 0 }
+main .kg-header-card h2.kg-header-card-header strong { font-weight: 800 }
+main .kg-header-card.kg-size-small h2.kg-header-card-header { font-size: 4em }
+
 @media (max-width: 1080px){
 	.container {max-width: 990px}
 	.blog-cover h1 { line-height: 1.2em;margin: 0 0.6em 0.3em;font-weight: 700;}
