@@ -506,6 +506,10 @@ main .kg-header-card h2.kg-header-card-header { font-size: 5em; font-weight: 700
 main .kg-header-card h2.kg-header-card-header strong { font-weight: 800 }
 main .kg-header-card.kg-size-small h2.kg-header-card-header { font-size: 4em }
 
+main .kg-button-card .kg-btn { background: #109954; color: #fff; padding: 6px 14px; border: 1px solid #0c7a43; } 
+main .kg-button-card .kg-btn:hover { background: #0c7a43; color: #fff; border: 1px solid #0c7a43; }
+
+
 @media (max-width: 1080px){
 	.container {max-width: 990px}
 	.blog-cover h1 { line-height: 1.2em;margin: 0 0.6em 0.3em;font-weight: 700;}
