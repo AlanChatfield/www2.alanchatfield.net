@@ -508,6 +508,7 @@ main .kg-header-card.kg-size-small h2.kg-header-card-header { font-size: 4em }
 
 main .kg-button-card .kg-btn { background: #109954; color: #fff; padding: 6px 14px; border: 1px solid #0c7a43; } 
 main .kg-button-card .kg-btn:hover { background: #0c7a43; color: #fff; border: 1px solid #0c7a43; }
+main .kg-button-card { margin-bottom: 3em; }
 
 
 @media (max-width: 1080px){
