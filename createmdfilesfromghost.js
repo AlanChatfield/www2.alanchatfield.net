@@ -85,7 +85,7 @@ const createMdFilesFromGhost = async () => {
         // Fetch  posts from the Ghost Content API
         const posts = await api.posts.browse({
             limit: 'all',
-            filter: 'tag:[hash-member]',		
+            filter: 'tag:[hash-member]+visibility:members',		
             include: 'tags,authors',
             formats: ['html'],
             order: 'published_at DESC'
@@ -111,6 +111,72 @@ const createMdFilesFromGhost = async () => {
                 i18nlanguage: 'en', // Change for your language
                 weight: post.featured ? 1 : 0,
                 draft: post.visibility !== 'members',
+            };	
+
+            // The format of og_image is /content/images/2020/04/social-image-filename.jog
+            // without the root of the URL. Prepend if necessary.
+            let ogImage = post.og_image || post.feature_image || '';
+            if (!ogImage.includes('https://www.alanchatfield.ghost.io')) {
+                ogImage = 'https://marketingviatechnology.com' + ogImage
+            }
+            frontmatter.og_image = ogImage;
+
+            if (post.tags && post.tags.length) {
+                frontmatter.tags = post.tags.filter(t => t.name != '#member').filter(t => t.name != '#crmtdigital').map(t => t.name);
+            }
+
+            // If there's a canonical url, please add it.
+            if (post.canonical_url) {
+                frontmatter.canonical = post.canonical_url;
+            }
+
+            // Create frontmatter properties from all keys in our post object
+            const yamlPost = await yaml.dump(frontmatter);
+
+            // Super simple concatenating of the frontmatter and our content
+            const fileString = `---\n${yamlPost}\n---\n${content}\n`;
+
+            // Save the final string of our file as a Markdown file
+            await fs.writeFile(path.join('content/news', `${post.slug}.md`), fileString, { flag: 'w' });
+        }));
+
+    console.timeEnd('All marketing posts converted to Markdown in');
+    } catch (error) {
+        console.error(error);
+    }
+
+    console.time('All public marketing posts converted to Markdown in');
+
+    try {
+        // Fetch  posts from the Ghost Content API
+        const posts = await api.posts.browse({
+            limit: '1',
+            filter: 'tag:[hash-member]+visibility:public+published_at:<=now-7d',		
+            include: 'tags,authors',
+            formats: ['html'],
+            order: 'published_at ASC'
+        });
+
+        await Promise.all(posts.map(async (post) => {
+            let content = post.html;
+            
+            const frontmatter = {
+                title: post.meta_title || post.title,
+                description: post.meta_description || post.excerpt,
+                pagetitle: post.title,
+                slug: post.slug,
+                image: post.feature_image,	
+		image_credit: post.feature_image_caption,    
+                lastmod: post.updated_at,
+                date: post.published_at,
+                excerpt: post.excerpt,  
+		og_title: post.og_title || post.meta_title || post.title, 
+		og_description: post.og_description || post.meta_description || post.excerpt,
+		twitter_title: post.twitter_title || post.meta_title || post.title, 
+		twitter_description: post.twitter_description || post.meta_description || post.excerpt,		    
+                i18nlanguage: 'en', // Change for your language
+                weight: post.featured ? 1 : 0,
+                draft: post.visibility !== 'public',
             };	
 
             // The format of og_image is /content/images/2020/04/social-image-filename.jog
