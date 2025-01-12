@@ -206,7 +206,7 @@ const createMdFilesFromGhost = async () => {
             await fs.writeFile(path.join('content/news', `${post.slug}.md`), fileString, { flag: 'w' });
         }));
 
-    console.timeEnd('All marketing posts converted to Markdown in');
+    console.timeEnd('All public marketing posts converted to Markdown in');
     } catch (error) {
         console.error(error);
     }	
